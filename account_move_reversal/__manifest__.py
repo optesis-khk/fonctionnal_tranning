@@ -1,7 +1,7 @@
 {
     'name': 'Account Move Reversal',
     'author': 'Optesis SA',
-    'version': '1.3.0',
+    'version': '1.5.0',
     'category': 'Tools',
     'description': """
     permet de faire une description ...

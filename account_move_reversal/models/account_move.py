@@ -1,4 +1,5 @@
 from odoo import api, fields, models, _
+from odoo.exceptions import ValidationError
 
 class AccountMove(models.Model):
     _inherit = "account.move"
@@ -20,10 +21,22 @@ class AccountMove(models.Model):
         self.reverse_entry_id = reversed_move
         return reversed_move
 
+    @api.constrains("line_ids")
+    def contol_lines(self):
+        total_debit = 0
+        total_credit = 0
+        for line in self.line_ids:
+            total_debit = total_debit + line.total_debit
+            total_credit = total_credit + line.total_credit
+        if total_debit != total_credit:
+            raise ValidationError(_("Les valeurs ne sont pas équilibrées"))
+
+
+
+
 class AccountMoveLine(models.Model):
     _inherit = "account.move.line"
 
     _sql_constraints = [
         ('credit_debit2', 'CHECK (1=1)', 'Wrong credit or debit value in accounting entry !'),
-        ('credit_debit3', 'CHECK (credit+debit<=0)', 'Wrong credit or debit value in accounting entry !'),
     ]
