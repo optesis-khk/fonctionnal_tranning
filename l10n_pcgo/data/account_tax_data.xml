@@ -171,5 +171,9 @@
           <field name="tag_ids" eval="[(6,0,[ref('TVA_vente_exempt_0')])]"/>
       </record>
 
+      <function model="account.chart.template" name="try_loading_for_current_company">
+        <value eval="[ref('l10n_pcgo.l10n_pcgo_chart_template')]"/>
+      </function>
+
 
 </odoo>
