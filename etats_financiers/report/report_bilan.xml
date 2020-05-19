@@ -1,0 +1,1713 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <template id="report_bilan">
+    <t t-call="web.html_container">
+      <t t-foreach="docs" t-as="o">
+        <t t-call="web.internal_layout">
+          <div class="page">
+
+
+            <style type="text/css">
+
+
+              #tuncht{
+              background: rgb(224, 80, 24);
+
+              }
+              #tunch{
+              background: rgb(224, 80, 24);
+              color: white;
+              }
+
+              #tunch2{
+              background: rgb(236, 151, 118);
+              }
+              #tunwidth{
+              background: rgb(224, 80, 24);
+              color: white;
+              width: 230px;
+
+
+              }
+
+            </style>
+
+
+            <div align="center">
+              <strong>    BILAN ACTIF </strong>
+
+            </div>
+            <br/>
+
+            <!-- premier_tableau -->
+            <table class="table table-condensed table-bordered" style="width:100%" >
+
+
+
+
+
+              <tr id="tunch">
+                <td align="center" class="align-middle" rowspan="2">
+                  REF
+                </td>
+                <td align="center" class="align-middle" rowspan="2">
+                  ACTIF
+                </td>
+                <td align="center" class="align-middle" rowspan="2">
+                  Note
+                </td>
+                <td align="center" class="align-middle" colspan="3"  >
+                  Exercice clos le (date)
+                </td>
+
+
+                <td  align="center" class="align-middle">
+                  Exercice N - * clos le (date)
+                </td>
+
+
+              </tr>
+              <tr id="tunch">
+
+                <td align="center" class="align-middle">
+                  BRUT
+                </td>
+                <td align="center" class="align-middle">
+                  AMORTISSEMENTS / DEPRECIATIONS
+                </td>
+                <td  align="center" class="align-middle">
+                  NET
+                </td>
+
+                <td align="center" class="align-middle">
+                  NET
+                </td>
+
+
+                <!--1-->
+              </tr>
+
+              <tr id="tunchi">
+                <td   class="align-middle" >
+                  <strong>
+                    AD
+                  </strong>
+                </td>
+
+                <td   class="align-middle" id="tunch2">
+                  <strong>  IMMOBILISATIONS INCORPORELLES</strong>
+                </td>
+
+                <td align="center" class="align-middle" id="tunch2">
+                  <strong> </strong>
+                </td>
+
+
+                <td align="center" class="align-middle" id="tunch2">
+                  <strong> </strong>
+                </td>
+
+                <td align="center" class="align-middle" id="tunch2">
+                  <strong> </strong>
+                </td>
+
+
+                <td   align="center" class="align-middle" id="tunch2">
+                  <strong> </strong>
+                </td>
+
+                <td   align="center" class="align-middle" id="tunch2">
+                  <strong> </strong>
+                </td>
+
+              </tr>
+
+              <!--2-->
+              <tr id="tunchi">
+                <td   class="align-middle">
+                  AE
+                </td>
+
+                <td   class="align-middle">
+                  Frais de développement et de prospection
+                </td>
+
+                <td align="center" class="align-middle">
+                  3
+                </td>
+
+
+                <td align="center" class="align-middle">
+                  <!-- <t t-foreach="o.move_id.line_id" t-as="line">
+                  <t t-if="line.account_id.code == '110200'">
+                  <t t-esc="line.debit"/>
+                </t>
+              </t> -->
+              8389439479
+            </td>
+
+            <td align="center" class="align-middle">
+              2 502 895 801
+            </td>
+
+
+            <td   align="center" class="align-middle">
+              2 502 895 801
+            </td>
+
+            <td   align="center" class="align-middle">
+              2 502 895 801
+            </td>
+
+          </tr>
+          <!--3-->
+          <tr id="tunchi">
+            <td   class="align-middle">
+              AF
+            </td>
+
+            <td   class="align-middle">
+              Brevets, licences, logiciels, et droits simulaires
+            </td>
+
+            <td align="center" class="align-middle">
+
+            </td>
+
+
+            <td align="center" class="align-middle">
+
+            </td>
+
+            <td align="center" class="align-middle">
+
+            </td>
+
+
+            <td   align="center" class="align-middle">
+
+            </td>
+
+            <td   align="center" class="align-middle">
+
+            </td>
+
+          </tr>
+
+          <!--4-->
+          <tr id="tunchi">
+            <td   class="align-middle">
+              AG
+            </td>
+
+            <td   class="align-middle">
+              Fonds commercial et droit au bai
+            </td>
+
+            <td align="center" class="align-middle">
+
+            </td>
+
+
+            <td align="center" class="align-middle">
+
+            </td>
+
+            <td align="center" class="align-middle">
+
+            </td>
+
+
+            <td   align="center" class="align-middle">
+
+            </td>
+
+            <td   align="center" class="align-middle">
+
+            </td>
+
+          </tr>
+          <!--5-->
+          <tr id="tunchi">
+            <td   class="align-middle">
+              AH
+            </td>
+
+            <td   class="align-middle">
+              Autres immobilisations incorporelles
+            </td>
+
+            <td align="center" class="align-middle">
+
+            </td>
+
+
+            <td align="center" class="align-middle">
+
+            </td>
+
+            <td align="center" class="align-middle">
+
+            </td>
+
+
+            <td   align="center" class="align-middle">
+
+            </td>
+
+            <td   align="center" class="align-middle">
+
+            </td>
+
+          </tr>
+
+          <!--6-->
+          <tr id="tunchi">
+            <td   class="align-middle">
+              <strong>
+                AI
+              </strong>
+            </td>
+
+            <td   class="align-middle" id="tunch2">
+              <strong> IMMOBILISATIONS CORPORELLES </strong>
+            </td>
+
+            <td align="center" class="align-middle" id="tunch2">
+              <strong> </strong>
+            </td>
+
+
+            <td align="center" class="align-middle" id="tunch2">
+              <strong> </strong>
+            </td>
+
+            <td align="center" class="align-middle" id="tunch2">
+              <strong> </strong>
+            </td>
+
+
+            <td   align="center" class="align-middle" id="tunch2">
+              <strong> </strong>
+            </td>
+
+            <td   align="center" class="align-middle" id="tunch2">
+              <strong> </strong>
+            </td>
+
+          </tr>
+          <!--7-->
+          <tr id="tunchi">
+            <td   class="align-middle">
+              AJ
+            </td>
+
+            <td   class="align-middle">
+              Terrains
+            </td>
+
+            <td align="center" class="align-middle">
+
+            </td>
+
+
+            <td align="center" class="align-middle">
+
+            </td>
+
+            <td align="center" class="align-middle">
+
+            </td>
+
+
+            <td   align="center" class="align-middle">
+
+            </td>
+
+            <td   align="center" class="align-middle">
+
+            </td>
+
+          </tr>
+          <!--8-->
+          <tr id="tunchi">
+            <td   class="align-middle">
+              AK
+            </td>
+
+            <td   class="align-middle">
+              Batiments
+            </td>
+
+            <td align="center" class="align-middle">
+
+            </td>
+
+
+            <td align="center" class="align-middle">
+
+            </td>
+
+            <td align="center" class="align-middle">
+
+            </td>
+
+
+            <td   align="center" class="align-middle">
+
+            </td>
+
+            <td   align="center" class="align-middle">
+
+            </td>
+
+          </tr>
+          <!--9-->
+          <tr id="tunchi">
+            <td   class="align-middle">
+              AL
+            </td>
+
+            <td   class="align-middle">
+              Aménagements, agencements et installations
+            </td>
+
+            <td align="center" class="align-middle">
+
+            </td>
+
+
+            <td align="center" class="align-middle">
+
+            </td>
+
+            <td align="center" class="align-middle">
+
+            </td>
+
+
+            <td   align="center" class="align-middle">
+
+            </td>
+
+            <td   align="center" class="align-middle">
+
+            </td>
+
+          </tr>
+          <!--10-->
+          <tr id="tunchi">
+            <td   class="align-middle">
+              AM
+            </td>
+
+            <td   class="align-middle">
+              Matériels, mobiliers et actifs biologiques
+            </td>
+
+            <td align="center" class="align-middle">
+
+            </td>
+
+
+            <td align="center" class="align-middle">
+
+            </td>
+
+            <td align="center" class="align-middle">
+
+            </td>
+
+
+            <td   align="center" class="align-middle">
+
+            </td>
+
+            <td   align="center" class="align-middle">
+
+            </td>
+
+          </tr>
+          <!--11-->
+          <tr id="tunchi">
+            <td   class="align-middle">
+              AN
+            </td>
+
+            <td   class="align-middle">
+              Matériels de transport
+            </td>
+
+            <td align="center" class="align-middle">
+
+            </td>
+
+
+            <td align="center" class="align-middle">
+
+            </td>
+
+            <td align="center" class="align-middle">
+
+            </td>
+
+
+            <td   align="center" class="align-middle">
+
+            </td>
+
+            <td   align="center" class="align-middle">
+
+            </td>
+
+          </tr>
+          <!--12-->
+          <tr id="tunchi">
+            <td   class="align-middle">
+              AP
+            </td>
+
+            <td   class="align-middle">
+
+              Avances et accomptes versés sur immobilisation
+
+            </td>
+
+            <td align="center" class="align-middle">
+
+            </td>
+
+
+            <td align="center" class="align-middle">
+
+            </td>
+
+            <td align="center" class="align-middle">
+
+            </td>
+
+
+            <td   align="center" class="align-middle">
+
+            </td>
+
+            <td   align="center" class="align-middle">
+
+            </td>
+
+          </tr>
+          <!--13-->
+          <tr id="tunchi">
+            <td   class="align-middle">
+              <strong>
+                AQ
+              </strong>
+            </td>
+
+            <td   class="align-middle" id="tunch2">
+              IMMOBILISATIONS FINANCIERES
+            </td>
+
+            <td align="center" class="align-middle" id="tunch2">
+              <strong> </strong>
+            </td>
+
+
+            <td align="center" class="align-middle" id="tunch2">
+              <strong> </strong>
+            </td>
+
+            <td align="center" class="align-middle" id="tunch2">
+              <strong> </strong>
+            </td>
+
+
+            <td   align="center" class="align-middle" id="tunch2">
+              <strong> </strong>
+            </td>
+
+            <td   align="center" class="align-middle" id="tunch2">
+              <strong> </strong>
+            </td>
+
+          </tr>
+          <!--14-->
+          <tr id="tunchi">
+            <td   class="align-middle">
+              AR
+            </td>
+
+            <td   class="align-middle">
+              Titre de participation
+            </td>
+
+            <td align="center" class="align-middle">
+
+            </td>
+
+
+            <td align="center" class="align-middle">
+
+            </td>
+
+            <td align="center" class="align-middle">
+
+            </td>
+
+
+            <td   align="center" class="align-middle">
+
+            </td>
+
+            <td   align="center" class="align-middle">
+
+            </td>
+
+          </tr>
+          <!--15-->
+          <tr id="tunchi">
+            <td   class="align-middle">
+              AS
+            </td>
+
+            <td   class="align-middle">
+              Autres immobilisations financiéres
+            </td>
+
+            <td align="center" class="align-middle">
+
+            </td>
+
+
+            <td align="center" class="align-middle">
+
+            </td>
+
+            <td align="center" class="align-middle">
+
+            </td>
+
+
+            <td   align="center" class="align-middle">
+
+            </td>
+
+            <td   align="center" class="align-middle">
+
+            </td>
+
+          </tr>
+          <!--16-->
+          <tr id="tunchi">
+            <td   class="align-middle">
+              <strong>
+                AZ
+              </strong>
+            </td>
+
+            <td   class="align-middle" id="tunch2">
+              <strong>
+                TOTAL ACTIF IMMOBILISE </strong>
+              </td>
+
+              <td align="center" class="align-middle" id="tunch2">
+                <strong> </strong>
+              </td>
+
+
+              <td align="center" class="align-middle" id="tunch2">
+                <strong> </strong>
+              </td>
+
+              <td align="center" class="align-middle" id="tunch2">
+                <strong> </strong>
+              </td>
+
+
+              <td   align="center" class="align-middle" id="tunch2">
+                <strong> </strong>
+              </td>
+
+              <td   align="center" class="align-middle" id="tunch2">
+                <strong> </strong>
+              </td>
+
+            </tr>
+
+            <!--17-->
+            <tr id="tunchi">
+              <td   class="align-middle">
+                BA
+              </td>
+
+              <td   class="align-middle">
+                Actifs circulant HAO
+              </td>
+
+              <td align="center" class="align-middle">
+
+              </td>
+
+
+              <td align="center" class="align-middle">
+
+              </td>
+
+              <td align="center" class="align-middle">
+
+              </td>
+
+
+              <td   align="center" class="align-middle">
+
+              </td>
+
+              <td   align="center" class="align-middle">
+
+              </td>
+
+            </tr>
+            <!--18-->
+            <tr id="tunchi">
+              <td   class="align-middle">
+                BB
+              </td>
+
+              <td   class="align-middle">
+                Stock  et encours
+              </td>
+
+              <td align="center" class="align-middle">
+
+              </td>
+
+
+              <td align="center" class="align-middle">
+
+              </td>
+
+              <td align="center" class="align-middle">
+
+              </td>
+
+
+              <td   align="center" class="align-middle">
+
+              </td>
+
+              <td   align="center" class="align-middle">
+
+              </td>
+
+            </tr>
+            <!--19-->
+            <tr id="tunchi">
+              <td   class="align-middle">
+                <strong>
+                  BG
+                </strong>
+              </td>
+
+              <td   class="align-middle" id="tunch2">
+                <strong>
+                  CREANCES ET EMPLOIS ASSIMILES </strong>
+                </td>
+
+                <td align="center" class="align-middle" id="tunch2">
+                  <strong> </strong>
+                </td>
+
+
+                <td align="center" class="align-middle" id="tunch2">
+                  <strong> </strong>
+                </td>
+
+                <td align="center" class="align-middle" id="tunch2">
+                  <strong> </strong>
+                </td>
+
+
+                <td   align="center" class="align-middle" id="tunch2">
+                  <strong> </strong>
+                </td>
+
+                <td   align="center" class="align-middle" id="tunch2">
+                  <strong> </strong>
+                </td>
+
+              </tr>
+              <!--20-->
+              <tr id="tunchi">
+                <td   class="align-middle">
+                  BH
+                </td>
+
+                <td   class="align-middle">
+                  Fournisseurs avances versées
+                </td>
+
+                <td align="center" class="align-middle">
+
+                </td>
+
+
+                <td align="center" class="align-middle">
+
+                </td>
+
+                <td align="center" class="align-middle">
+
+                </td>
+
+
+                <td   align="center" class="align-middle">
+
+                </td>
+
+                <td   align="center" class="align-middle">
+
+                </td>
+
+              </tr>
+              <!--21-->
+              <tr id="tunchi">
+                <td   class="align-middle">
+                  BI
+                </td>
+
+                <td   class="align-middle">
+                  Clients
+                </td>
+
+                <td align="center" class="align-middle">
+
+                </td>
+
+
+                <td align="center" class="align-middle">
+
+                </td>
+
+                <td align="center" class="align-middle">
+
+                </td>
+
+
+                <td   align="center" class="align-middle">
+
+                </td>
+
+                <td   align="center" class="align-middle">
+
+                </td>
+
+              </tr>
+              <!--22-->
+              <tr id="tunchi">
+                <td   class="align-middle">
+                  BJ
+                </td>
+
+                <td   class="align-middle">
+                  Autres créances
+                </td>
+
+                <td align="center" class="align-middle">
+
+                </td>
+
+
+                <td align="center" class="align-middle">
+
+                </td>
+
+                <td align="center" class="align-middle">
+
+                </td>
+
+
+                <td   align="center" class="align-middle">
+
+                </td>
+
+                <td   align="center" class="align-middle">
+
+                </td>
+
+              </tr>
+              <!--23-->
+              <tr id="tunchi">
+                <td   class="align-middle">
+                  <strong>
+                    BK
+                  </strong>
+                </td>
+
+                <td   class="align-middle" id="tunch2">
+                  <strong>
+                    TOTAL ACTIF CIRCULANT </strong>
+                  </td>
+
+                  <td align="center" class="align-middle" id="tunch2">
+                    <strong> </strong>
+                  </td>
+
+
+                  <td align="center" class="align-middle" id="tunch2">
+                    <strong> </strong>
+                  </td>
+
+                  <td align="center" class="align-middle" id="tunch2">
+                    <strong> </strong>
+                  </td>
+
+
+                  <td   align="center" class="align-middle" id="tunch2">
+                    <strong> </strong>
+                  </td>
+
+                  <td   align="center" class="align-middle" id="tunch2">
+                    <strong> </strong>
+                  </td>
+
+                </tr>
+                <!--24-->
+                <tr id="tunchi">
+                  <td   class="align-middle">
+                    BQ
+                  </td>
+
+                  <td   class="align-middle">
+                    Titre de placement
+                  </td>
+
+                  <td align="center" class="align-middle">
+
+                  </td>
+
+
+                  <td align="center" class="align-middle">
+
+                  </td>
+
+                  <td align="center" class="align-middle">
+
+                  </td>
+
+
+                  <td   align="center" class="align-middle">
+
+                  </td>
+
+                  <td   align="center" class="align-middle">
+
+                  </td>
+
+                </tr>
+                <!--25-->
+                <tr id="tunchi">
+                  <td   class="align-middle">
+                    BR
+                  </td>
+
+                  <td   class="align-middle">
+                    Valeurs à encaisser
+                  </td>
+
+                  <td align="center" class="align-middle">
+
+                  </td>
+
+
+                  <td align="center" class="align-middle">
+
+                  </td>
+
+                  <td align="center" class="align-middle">
+
+                  </td>
+
+
+                  <td   align="center" class="align-middle">
+
+                  </td>
+
+                  <td   align="center" class="align-middle">
+
+                  </td>
+
+                </tr>
+                <!--26-->
+                <tr id="tunchi">
+                  <td   class="align-middle">
+                    BS
+                  </td>
+
+                  <td   class="align-middle">
+                    Banque, chéques postaux, caisse et assimilés
+                  </td>
+
+                  <td align="center" class="align-middle">
+
+                  </td>
+
+
+                  <td align="center" class="align-middle">
+
+                  </td>
+
+                  <td align="center" class="align-middle">
+
+                  </td>
+
+
+                  <td   align="center" class="align-middle">
+
+                  </td>
+
+                  <td   align="center" class="align-middle">
+
+                  </td>
+
+                </tr>
+                <!--27-->
+                <tr id="tunchi">
+                  <td   class="align-middle">
+                    <strong>
+                      BT
+                    </strong>
+                  </td>
+
+                  <td   class="align-middle" id="tunch2">
+                    <strong>
+                      TOTAL TRESORERIE ACTIF </strong>
+                    </td>
+
+                    <td align="center" class="align-middle" id="tunch2">
+                      <strong> </strong>
+                    </td>
+
+
+                    <td align="center" class="align-middle" id="tunch2">
+                      <strong> </strong>
+                    </td>
+
+                    <td align="center" class="align-middle" id="tunch2">
+                      <strong> </strong>
+                    </td>
+
+
+                    <td   align="center" class="align-middle" id="tunch2">
+                      <strong> </strong>
+                    </td>
+
+                    <td   align="center" class="align-middle" id="tunch2">
+                      <strong> </strong>
+                    </td>
+
+                  </tr>
+                  <!--28-->
+                  <tr id="tunchi">
+                    <td   class="align-middle">
+                      BU
+                    </td>
+
+                    <td   class="align-middle">
+                      Ecart de conversion - Actif
+                    </td>
+
+                    <td align="center" class="align-middle">
+
+                    </td>
+
+
+                    <td align="center" class="align-middle">
+
+                    </td>
+
+                    <td align="center" class="align-middle">
+
+                    </td>
+
+
+                    <td   align="center" class="align-middle">
+
+                    </td>
+
+                    <td   align="center" class="align-middle">
+
+                    </td>
+
+                  </tr>
+                  <!--29-->
+                  <tr id="tuncht">
+                    <td   class="align-middle">
+                      BZ
+                    </td>
+
+                    <td   class="align-middle">
+                      <strong>
+                        TOTAL GENERAL
+                      </strong>
+                    </td>
+
+                    <td align="center" class="align-middle">
+                      <strong> </strong>
+                    </td>
+
+
+                    <td align="center" class="align-middle">
+                      <strong> </strong>
+                    </td>
+
+                    <td align="center" class="align-middle">
+                      <strong> </strong>
+                    </td>
+
+
+                    <td   align="center" class="align-middle">
+                      <strong> </strong>
+                    </td>
+
+                    <td   align="center" class="align-middle">
+                      <strong> </strong>
+                    </td>
+
+                  </tr>
+
+
+                </table>
+
+
+                <p style="page-break-after:always;">   </p>
+
+                <div align="center">
+                  <strong> BILAN PASSIF </strong>
+
+                </div>
+                <br/>
+
+                <!-- deuxieme_tableau -->
+
+                <table class="table table-condensed table-bordered" style="width:100%" >
+
+
+                  <tr id="tunch">
+                    <td align="center" class="align-middle" >
+                      REF
+                    </td>
+                    <td align="center" class="align-middle" >
+                      PASSIF
+                    </td>
+                    <td align="center" class="align-middle" >
+                      Note
+                    </td>
+                    <td align="center" class="align-middle" >
+                      BILANREFPASSIFExercice clos le (DATE) NET
+                    </td>
+
+
+                    <td   align="center" class="align-middle">
+                      Exercice N-1 clos le (DATE) NET
+                    </td>
+
+
+                  </tr>
+
+                  <tr id="">
+                    <td   class="align-middle" >
+                      CA
+                    </td>
+                    <td   class="align-middle" >
+                      Capital
+                    </td>
+                    <td align="center" class="align-middle" >
+                      13
+                    </td>
+                    <td align="center" class="align-middle" >
+                      100 000 000
+                    </td>
+
+
+                    <td   align="center" class="align-middle">
+                      100 000 000
+                    </td>
+
+
+                  </tr>
+                  <tr id="">
+                    <td   class="align-middle" >
+                      CB
+                    </td>
+                    <td   class="align-middle" >
+                      Apporteurs capital non appelé(-)
+                    </td>
+                    <td align="center" class="align-middle" >
+
+                    </td>
+                    <td align="center" class="align-middle" >
+
+                    </td>
+
+
+                    <td   align="center" class="align-middle">
+
+                    </td>
+
+
+                  </tr> <tr id="">
+                  <td   class="align-middle" >
+                    CD
+                  </td>
+                  <td   class="align-middle" >
+                    Primes liées au capital social
+                  </td>
+                  <td align="center" class="align-middle" >
+
+                  </td>
+                  <td align="center" class="align-middle" >
+
+                  </td>
+
+
+                  <td   align="center" class="align-middle">
+
+                  </td>
+
+
+                </tr> <tr id="">
+                <td   class="align-middle" >
+                  CE
+                </td>
+                <td   class="align-middle" >
+                  Ecart de réévaluation
+                </td>
+                <td align="center" class="align-middle" >
+
+                </td>
+                <td align="center" class="align-middle" >
+
+                </td>
+
+
+                <td   align="center" class="align-middle">
+
+                </td>
+
+
+              </tr> <tr id="">
+              <td   class="align-middle" >
+                CF
+              </td>
+              <td   class="align-middle" >
+                Reserves indisponibles
+              </td>
+              <td align="center" class="align-middle" >
+
+              </td>
+              <td align="center" class="align-middle" >
+
+              </td>
+
+
+              <td   align="center" class="align-middle">
+
+              </td>
+
+
+            </tr> <tr id="">
+            <td   class="align-middle" >
+              CG
+            </td>
+            <td   class="align-middle" >
+              Reserves libres
+            </td>
+            <td align="center" class="align-middle" >
+
+            </td>
+            <td align="center" class="align-middle" >
+
+            </td>
+
+
+            <td   align="center" class="align-middle">
+
+            </td>
+
+
+          </tr> <tr id="">
+          <td   class="align-middle" >
+            CH
+          </td>
+          <td   class="align-middle" >
+            Report + nouveau (+ ou -)
+          </td>
+          <td align="center" class="align-middle" >
+
+          </td>
+          <td align="center" class="align-middle" >
+
+          </td>
+
+
+          <td   align="center" class="align-middle">
+
+          </td>
+
+
+        </tr> <tr id="">
+        <td   class="align-middle" >
+          CI
+        </td>
+        <td   class="align-middle" >
+          Resultat en instance d'affectation
+        </td>
+        <td align="center" class="align-middle" >
+
+        </td>
+        <td align="center" class="align-middle" >
+
+        </td>
+
+
+        <td   align="center" class="align-middle">
+
+        </td>
+
+
+      </tr> <tr id="">
+      <td   class="align-middle" >
+        CJ
+      </td>
+      <td   class="align-middle" >
+        Resultat net de l'exercice (bénéfice + ou perte -)
+      </td>
+      <td align="center" class="align-middle" >
+
+      </td>
+      <td align="center" class="align-middle" >
+
+      </td>
+
+
+      <td   align="center" class="align-middle">
+
+      </td>
+
+
+    </tr> <tr id="">
+    <td   class="align-middle" >
+      CL
+    </td>
+    <td   class="align-middle" >
+      Subvention d'investissement
+    </td>
+    <td align="center" class="align-middle" >
+
+    </td>
+    <td align="center" class="align-middle" >
+
+    </td>
+
+
+    <td   align="center" class="align-middle">
+
+    </td>
+
+
+  </tr> <tr id="">
+  <td   class="align-middle" >
+    CM
+  </td>
+  <td   class="align-middle" >
+    Provisions reglementees
+  </td>
+  <td align="center" class="align-middle" >
+
+  </td>
+  <td align="center" class="align-middle" >
+
+  </td>
+
+
+  <td   align="center" class="align-middle">
+
+  </td>
+
+
+</tr> <tr id="tunch2">
+<td   class="align-middle" >
+  <strong>CP</strong>
+</td>
+<td   class="align-middle" >
+  <strong>TOTAL CAPITAUX PROPRES ET RESSOURCES ASSIMILEES</strong>
+</td>
+<td align="center" class="align-middle" >
+  <strong></strong>
+</td>
+<td align="center" class="align-middle" >
+  <strong></strong>
+</td>
+
+
+<td   align="center" class="align-middle">
+  <strong></strong>
+</td>
+
+
+</tr> <tr id="">
+<td   class="align-middle" >
+  DA
+</td>
+<td   class="align-middle" >
+  Emprunt et dettes financieres
+</td>
+<td align="center" class="align-middle" >
+
+</td>
+<td align="center" class="align-middle" >
+
+</td>
+
+
+<td   align="center" class="align-middle">
+
+</td>
+
+
+</tr> <tr id="">
+<td   class="align-middle" >
+  DB
+</td>
+<td   class="align-middle" >
+  Dette de location acquisition
+</td>
+<td align="center" class="align-middle" >
+
+</td>
+<td align="center" class="align-middle" >
+
+</td>
+
+
+<td   align="center" class="align-middle">
+
+</td>
+
+
+</tr> <tr id="">
+<td   class="align-middle" >
+  DC
+</td>
+<td   class="align-middle" >
+  Provisions pour risques et charges
+</td>
+<td align="center" class="align-middle" >
+
+</td>
+<td align="center" class="align-middle" >
+
+</td>
+
+
+<td   align="center" class="align-middle">
+
+</td>
+
+
+</tr> <tr id="tunch2">
+<td   class="align-middle" >
+  <strong>DD</strong>
+</td>
+<td   class="align-middle" >
+  <strong>OTAL DETTES FINANCIERES ET RESSOURCES ASSIMILEES</strong>
+</td>
+<td align="center" class="align-middle" >
+  <strong></strong>
+</td>
+<td align="center" class="align-middle" >
+  <strong></strong>
+</td>
+
+
+<td   align="center" class="align-middle">
+  <strong></strong>
+</td>
+
+
+</tr> <tr id="tunch2">
+<td   class="align-middle" >
+  <strong>DF</strong>
+</td>
+<td   class="align-middle" >
+  <strong>TOTAL RESSOURCES STABLES</strong>
+</td>
+<td align="center" class="align-middle" >
+  <strong></strong>
+</td>
+<td align="center" class="align-middle" >
+  <strong></strong>
+</td>
+
+
+<td   align="center" class="align-middle">
+  <strong></strong>
+</td>
+
+
+</tr> <tr id="">
+<td   class="align-middle" >
+  DH
+</td>
+<td   class="align-middle" >
+  Dettes circulantes HAO
+</td>
+<td align="center" class="align-middle" >
+
+</td>
+<td align="center" class="align-middle" >
+
+</td>
+
+
+<td   align="center" class="align-middle">
+
+</td>
+
+
+</tr> <tr id="">
+<td   class="align-middle" >
+  DI
+</td>
+<td   class="align-middle" >
+  Clients, avances reçues
+</td>
+<td align="center" class="align-middle" >
+
+</td>
+<td align="center" class="align-middle" >
+
+</td>
+
+
+<td   align="center" class="align-middle">
+
+</td>
+
+
+</tr> <tr id="">
+<td   class="align-middle" >
+  DJ
+</td>
+<td   class="align-middle" >
+  Fournisseur d'exploitation
+</td>
+<td align="center" class="align-middle" >
+
+</td>
+<td align="center" class="align-middle" >
+
+</td>
+
+
+<td   align="center" class="align-middle">
+
+</td>
+
+
+</tr> <tr id="">
+<td   class="align-middle" >
+  DK
+</td>
+<td   class="align-middle" >
+  Dettes fiscales et sociales
+</td>
+<td align="center" class="align-middle" >
+
+</td>
+<td align="center" class="align-middle" >
+
+</td>
+
+
+<td   align="center" class="align-middle">
+
+</td>
+
+
+</tr> <tr id="">
+<td   class="align-middle" >
+  DM
+</td>
+<td   class="align-middle" >
+  Autres dettes
+</td>
+<td align="center" class="align-middle" >
+
+</td>
+<td align="center" class="align-middle" >
+
+</td>
+
+
+<td   align="center" class="align-middle">
+
+</td>
+
+
+</tr> <tr id="">
+<td   class="align-middle" >
+  DN
+</td>
+<td   class="align-middle" >
+  Provisions pour risques à court terme
+</td>
+<td align="center" class="align-middle" >
+
+</td>
+<td align="center" class="align-middle" >
+
+</td>
+
+
+<td   align="center" class="align-middle">
+
+</td>
+
+
+</tr> <tr id="tunch2">
+<td   class="align-middle" >
+  <strong> DP </strong>
+</td>
+<td   class="align-middle" >
+  <strong> TOTAL PASSIF CIRCULANT </strong>
+</td>
+<td align="center" class="align-middle" >
+  <strong> </strong>
+</td>
+<td align="center" class="align-middle" >
+  <strong> </strong>
+</td>
+
+
+<td   align="center" class="align-middle">
+  <strong> </strong>
+</td>
+
+
+</tr> <tr id="">
+<td   class="align-middle" >
+  DQ
+</td>
+<td   class="align-middle" >
+  Banques, crédits d'escompte et de trésorerie
+</td>
+<td align="center" class="align-middle" >
+
+</td>
+<td align="center" class="align-middle" >
+
+</td>
+
+
+<td   align="center" class="align-middle">
+
+</td>
+
+
+</tr> <tr id="">
+<td   class="align-middle" >
+  DR
+</td>
+<td   class="align-middle" >
+  Banques, établissements financiers et crédit de trésorerie
+</td>
+<td align="center" class="align-middle" >
+
+</td>
+<td align="center" class="align-middle" >
+
+</td>
+
+
+<td   align="center" class="align-middle">
+
+</td>
+
+
+</tr> <tr id="tunch2">
+<td   class="align-middle" >
+  <strong>DT </strong>
+</td>
+<td   class="align-middle" >
+  <strong> TOTAL TRESORERIE PASSIF</strong>
+</td>
+<td align="center" class="align-middle" >
+  <strong> </strong>
+</td>
+<td align="center" class="align-middle" >
+  <strong> </strong>
+</td>
+
+
+<td   align="center" class="align-middle">
+  <strong> </strong>
+</td>
+
+
+</tr> <tr id="">
+<td   class="align-middle" >
+  DV
+</td>
+<td   class="align-middle" >
+  Ecart de conversion-Passif
+</td>
+<td align="center" class="align-middle" >
+
+</td>
+<td align="center" class="align-middle" >
+
+</td>
+
+
+<td   align="center" class="align-middle">
+
+</td>
+
+
+</tr> <tr id="tuncht">
+<td   class="align-middle" >
+  <strong> DZ</strong>
+</td>
+<td   class="align-middle" >
+  <strong> TOTAL GENERAL </strong>
+</td>
+<td align="center" class="align-middle" >
+  <strong> </strong>
+</td>
+<td align="center" class="align-middle" >
+  <strong> </strong>
+</td>
+
+
+<td   align="center" class="align-middle">
+  <strong> </strong>
+</td>
+
+
+</tr>
+
+
+
+<!--1-->
+</table>
+<br/>
+
+
+
+</div>
+</t>
+</t>
+</t>
+</template>
+</odoo>

@@ -1,0 +1,700 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <template id="report_tab_flux_treso">
+    <t t-call="web.html_container">
+      <t t-foreach="docs" t-as="o">
+        <t t-call="web.internal_layout">
+          <div class="page">
+            <style type="text/css">
+
+
+              #tuncht{
+              background: rgb(224, 80, 24);
+
+              }
+              #tunch{
+              background: rgb(224, 80, 24);
+              color: white;
+              }
+
+              #tunch2{
+              background: rgb(236, 151, 118);
+              }
+              #tunwidth{
+              background: rgb(224, 80, 24);
+              color: white;
+              width: 230px;
+
+
+              }
+
+            </style>
+
+            <div align="center">
+                   <strong align="center" > TABLEAU DES  FLUX DE RESORERIE  </strong>
+
+                 </div>
+                 <br/>
+
+
+                       <!-- 4_tableau -->
+
+                  <table class="table table-condensed table-bordered" style="width:100%" >
+
+
+                   <tr id="tunch">
+                           <td align="center" class="align-middle" >
+                               REF
+                           </td>
+                           <td align="center" class="align-middle" >
+                               LIBELLE
+                           </td>
+                           <td align="center" class="align-middle" >
+                           Note
+                           </td>
+                           <td align="center" class="align-middle" >
+                              Exercice N
+                           </td>
+
+
+                           <td   align="center" class="align-middle">
+                               Exercice N-1
+                           </td>
+
+
+                   </tr>
+
+                   <tr id="tunch2">
+                           <td   class="align-middle"   >
+                               ZA
+                           </td>
+                           <td   class="align-middle" id="">
+                              Trésorerie nette au 1er janvier (Trésorerie actif N - 1 - Trésorerie passif N-1)
+                           </td>
+                           <td   class="align-middle" id="">
+                          A
+                           </td>
+                           <td align="center" class="align-middle" id="">
+                             343 646 297
+                           </td>
+
+
+                           <td   align="center" class="align-middle" id="">
+
+                           </td>
+
+
+                   </tr>
+
+                    <tr id="tunch2">
+                           <td   class="align-middle" >
+
+                           </td>
+                           <td   class="align-middle" id=" ">
+                              Flux de tresorerie provenant des activités opérationnelles
+                           </td>
+                           <td align="center" class="align-middle" id=" ">
+
+                           </td>
+                           <td align="center" class="align-middle" id=" ">
+
+                           </td>
+
+
+                           <td   align="center" class="align-middle" id=" ">
+
+                           </td>
+
+
+                   </tr> <tr id=" ">
+                           <td   class="align-middle" >
+                               FA
+                           </td>
+                           <td   class="align-middle" id=" ">
+                              Capacité d'autofinancement global (C.A.FG)
+                           </td>
+                           <td align="center" class="align-middle" id=" ">
+
+                           </td>
+                           <td align="center" class="align-middle" id=" ">
+
+                           </td>
+
+
+                           <td   align="center" class="align-middle" id=" ">
+
+                           </td>
+
+
+                   </tr> <tr id=" ">
+                           <td   class="align-middle" >
+                               FB
+                           </td>
+                           <td   class="align-middle" id=" ">
+                              - Actif circulant HAO
+                           </td>
+                           <td align="center" class="align-middle" id=" ">
+
+                           </td>
+                           <td align="center" class="align-middle" id=" ">
+
+                           </td>
+
+
+                           <td   align="center" class="align-middle" id=" ">
+
+                           </td>
+
+
+                   </tr> <tr id=" ">
+                           <td   class="align-middle" >
+                               FC
+                           </td>
+                           <td   class="align-middle" id=" ">
+                              - Variation des stocks
+                           </td>
+                           <td align="center" class="align-middle" id=" ">
+
+                           </td>
+                           <td align="center" class="align-middle" id=" ">
+
+                           </td>
+
+
+                           <td   align="center" class="align-middle" id=" ">
+
+                           </td>
+
+
+                   </tr> <tr id=" ">
+                           <td   class="align-middle" >
+                               FD
+                           </td>
+                           <td   class="align-middle" id=" ">
+                              - Variation des créances
+                           </td>
+                           <td align="center" class="align-middle" id=" ">
+
+                           </td>
+                           <td align="center" class="align-middle" id=" ">
+
+                           </td>
+
+
+                           <td   align="center" class="align-middle" id=" ">
+
+                           </td>
+
+
+                   </tr> <tr id=" ">
+                           <td   class="align-middle" >
+                               FE
+                           </td>
+                           <td   class="align-middle" id=" ">
+                              + Variation du passif circulant
+                           </td>
+                           <td align="center" class="align-middle" id=" ">
+
+                           </td>
+                           <td align="center" class="align-middle" id=" ">
+
+                           </td>
+
+
+                           <td   align="center" class="align-middle" id=" ">
+
+                           </td>
+
+
+                   </tr> <tr id="tunch2">
+                           <td   class="align-middle" >
+
+                           </td>
+                           <td   class="align-middle" id=" ">
+                              Variation du BF lié aux activités opérationnelles (FB+FC+FD+FE)
+                           </td>
+                           <td align="center" class="align-middle" id=" ">
+
+                           </td>
+                           <td align="center" class="align-middle" id=" ">
+
+                           </td>
+
+
+                           <td   align="center" class="align-middle" id=" ">
+
+                           </td>
+
+
+                   </tr> <tr id="tunch2">
+                           <td   class="align-middle" >
+                               ZB
+                           </td>
+                           <td   class="align-middle" id=" ">
+                              Flux de trésorerie provenant des activités opérationnelles (somme FA ‡ FE)
+                           </td>
+                           <td align="center" class="align-middle" id=" ">
+
+                           </td>
+                           <td align="center" class="align-middle" id=" ">
+
+                           </td>
+
+
+                           <td   align="center" class="align-middle" id=" ">
+
+                           </td>
+
+
+                   </tr> <tr id="tunch2">
+                           <td   class="align-middle" >
+
+                           </td>
+                           <td   class="align-middle" id=" ">
+                              Flux de trésorerie provenant des activités d'investissement
+                           </td>
+                           <td align="center" class="align-middle" id=" ">
+
+                           </td>
+                           <td align="center" class="align-middle" id=" ">
+
+                           </td>
+
+
+                           <td   align="center" class="align-middle" id=" ">
+
+                           </td>
+
+
+                   </tr> <tr id=" ">
+                           <td   class="align-middle" >
+                               FF
+                           </td>
+                           <td   class="align-middle" id=" ">
+                              - Décaissements liés aux acquisitions d'immobilisations incorporelles
+                           </td>
+                           <td align="center" class="align-middle" id=" ">
+
+                           </td>
+                           <td align="center" class="align-middle" id=" ">
+
+                           </td>
+
+
+                           <td   align="center" class="align-middle" id=" ">
+
+                           </td>
+
+
+                   </tr> <tr id=" ">
+                           <td   class="align-middle" >
+                               FG
+                           </td>
+                           <td   class="align-middle" id=" ">
+                              - Décaissements liés aux acquisitions d'immobilisations corporelles
+                           </td>
+                           <td align="center" class="align-middle" id=" ">
+
+                           </td>
+                           <td align="center" class="align-middle" id=" ">
+
+                           </td>
+
+
+                           <td   align="center" class="align-middle" id=" ">
+
+                           </td>
+
+
+                   </tr> <tr id=" ">
+                           <td   class="align-middle" >
+                               FH
+                           </td>
+                           <td   class="align-middle" id=" ">
+                              - Décaissements liés aux acquisitions d'immobilisations financiéres
+                           </td>
+                           <td align="center" class="align-middle" id=" ">
+
+                           </td>
+                           <td align="center" class="align-middle" id=" ">
+
+                           </td>
+
+
+                           <td   align="center" class="align-middle" id=" ">
+
+                           </td>
+
+
+                   </tr> <tr id=" ">
+                           <td   class="align-middle" >
+                               FI
+                           </td>
+                           <td   class="align-middle" id=" ">
+                              + Encaissements liés aux cessions d'immobilisations incorporelles et corporelles
+                           </td>
+                           <td align="center" class="align-middle" id=" ">
+
+                           </td>
+                           <td align="center" class="align-middle" id=" ">
+
+                           </td>
+
+
+                           <td   align="center" class="align-middle" id=" ">
+
+                           </td>
+
+
+                   </tr> <tr id=" ">
+                           <td   class="align-middle" >
+                               FJ
+                           </td>
+                           <td   class="align-middle" id=" ">
+                              + Encaissements liés aux cessions d'immobilisations financiéres
+                           </td>
+                           <td align="center" class="align-middle" id=" ">
+
+                           </td>
+                           <td align="center" class="align-middle" id=" ">
+
+                           </td>
+
+
+                           <td   align="center" class="align-middle" id=" ">
+
+                           </td>
+
+
+                   </tr> <tr id="tunch2">
+                           <td   class="align-middle" >
+                               ZC
+                           </td>
+                           <td   class="align-middle" id=" ">
+                            Flux de trésorerie provenant des activités opérationnelles d'investissement (somme FE à FJ)
+                           </td>
+                           <td align="center" class="align-middle" id=" ">
+
+                           </td>
+                           <td align="center" class="align-middle" id=" ">
+
+                           </td>
+
+
+                           <td   align="center" class="align-middle" id=" ">
+
+                           </td>
+
+
+                   </tr> <tr id="tunch2">
+                           <td   class="align-middle" >
+
+                           </td>
+                           <td   class="align-middle" id=" ">
+                              Flux de trésorerie provenant du financement par les capitaux propres
+                           </td>
+                           <td align="center" class="align-middle" id=" ">
+
+                           </td>
+                           <td align="center" class="align-middle" id=" ">
+
+                           </td>
+
+
+                           <td   align="center" class="align-middle" id=" ">
+
+                           </td>
+
+
+                   </tr> <tr id="">
+                           <td   class="align-middle" >
+                               FK
+                           </td>
+                           <td   class="align-middle" id=" ">
+                              + Augmentation de capital par apport nouveau
+                           </td>
+                           <td align="center" class="align-middle" id=" ">
+
+                           </td>
+                           <td align="center" class="align-middle" id=" ">
+
+                           </td>
+
+
+                           <td   align="center" class="align-middle" id=" ">
+
+                           </td>
+
+
+                   </tr> <tr id=" ">
+                           <td   class="align-middle" >
+                               FL
+                           </td>
+                           <td   class="align-middle" id=" ">
+                              + Subventions d'investissement reçues
+                           </td>
+                           <td align="center" class="align-middle" id=" ">
+
+                           </td>
+                           <td align="center" class="align-middle" id=" ">
+
+                           </td>
+
+
+                           <td   align="center" class="align-middle" id=" ">
+
+                           </td>
+
+
+                   </tr> <tr id=" ">
+                           <td   class="align-middle" >
+                               FM
+                           </td>
+                           <td   class="align-middle" id=" ">
+                              - Prélévement sur le capital
+                           </td>
+                           <td align="center" class="align-middle" id=" ">
+
+                           </td>
+                           <td align="center" class="align-middle" id=" ">
+
+                           </td>
+
+
+                           <td   align="center" class="align-middle" id=" ">
+
+                           </td>
+
+
+                   </tr> <tr id=" ">
+                           <td   class="align-middle" >
+                               FN
+                           </td>
+                           <td   class="align-middle" id=" ">
+                              - Dividendes versés
+                           </td>
+                           <td align="center" class="align-middle" id=" ">
+
+                           </td>
+                           <td align="center" class="align-middle" id=" ">
+
+                           </td>
+
+
+                           <td   align="center" class="align-middle" id=" ">
+
+                           </td>
+
+
+                   </tr> <tr id="tunch2">
+                           <td   class="align-middle" >
+                               ZD
+                           </td>
+                           <td   class="align-middle" id=" ">
+                              Flux de trésorerie provenant des capitaux propres (somme FK à FN)
+                           </td>
+                           <td align="center" class="align-middle" id=" ">
+
+                           </td>
+                           <td align="center" class="align-middle" id=" ">
+
+                           </td>
+
+
+                           <td   align="center" class="align-middle" id=" ">
+
+                           </td>
+
+
+                   </tr> <tr id="tunch2">
+                           <td   class="align-middle" >
+
+                           </td>
+                           <td   class="align-middle" id=" ">
+                              Trésorerie provenant du financement par les capitaux étrangers
+                           </td>
+                           <td align="center" class="align-middle" id=" ">
+
+                           </td>
+                           <td align="center" class="align-middle" id=" ">
+
+                           </td>
+
+
+                           <td   align="center" class="align-middle" id=" ">
+
+                           </td>
+
+
+                   </tr> <tr id=" ">
+                           <td   class="align-middle" >
+                               FO
+                           </td>
+                           <td   class="align-middle" id=" ">
+                              + Emprunts
+                           </td>
+                           <td align="center" class="align-middle" id=" ">
+
+                           </td>
+                           <td align="center" class="align-middle" id=" ">
+
+                           </td>
+
+
+                           <td   align="center" class="align-middle" id=" ">
+
+                           </td>
+
+
+                   </tr> <tr id=" ">
+                           <td   class="align-middle" >
+                               FP
+                           </td>
+                           <td   class="align-middle" id=" ">
+                              + Autres  dettes financiéres
+                           </td>
+                           <td align="center" class="align-middle" id=" ">
+
+                           </td>
+                           <td align="center" class="align-middle" id=" ">
+
+                           </td>
+
+
+                           <td   align="center" class="align-middle" id=" ">
+
+                           </td>
+
+
+                   </tr> <tr id=" ">
+                           <td   class="align-middle" >
+
+                           </td>
+                           <td   class="align-middle" id=" ">
+
+                           </td>
+                           <td align="center" class="align-middle" id=" ">
+
+                           </td>
+                           <td align="center" class="align-middle" id=" ">
+
+                           </td>
+
+
+                           <td   align="center" class="align-middle" id=" ">
+
+                           </td>
+
+
+                   </tr> <tr id=" ">
+                           <td   class="align-middle" >
+                              FQ
+                           </td>
+                           <td   class="align-middle" id=" ">
+                              - Remboursements des emprunts et autres dettes financiéres
+                           </td>
+                           <td align="center" class="align-middle" id=" ">
+
+                           </td>
+                           <td align="center" class="align-middle" id=" ">
+
+                           </td>
+
+
+                           <td   align="center" class="align-middle" id=" ">
+
+                           </td>
+
+
+                   </tr> <tr id="tunch2">
+                           <td   class="align-middle" >
+                               ZE
+                           </td>
+                           <td   class="align-middle" id=" ">
+                              Flux de trésorerie provenant des capitaux érangers (somme FO à FQ)
+                           </td>
+                           <td align="center" class="align-middle" id=" ">
+                          E
+                           </td>
+                           <td align="center" class="align-middle" id=" ">
+
+                           </td>
+
+
+                           <td   align="center" class="align-middle" id=" ">
+
+                           </td>
+
+
+                   </tr> <tr id="tunch2">
+                           <td   class="align-middle" >
+                               ZF
+                           </td>
+                           <td   class="align-middle" id=" ">
+                              Flux de trésorerie provenant des activités de financement (D+E)
+                           </td>
+                           <td align="center" class="align-middle" id=" ">
+                          F
+                           </td>
+                           <td align="center" class="align-middle" id=" ">
+
+                           </td>
+
+
+                           <td   align="center" class="align-middle" id=" ">
+
+                           </td>
+
+
+                   </tr> <tr id="tunch2">
+                           <td   class="align-middle" >
+                               ZG
+                           </td>
+                           <td   class="align-middle" id=" ">
+                              VARIATION DE LA TRESORERIE NETTE DE LA PERIODE (B+C+F)
+                           </td>
+                           <td align="center" class="align-middle" id=" ">
+                           G
+
+                           </td>
+                           <td align="center" class="align-middle" id=" ">
+
+                           </td>
+
+
+                           <td   align="center" class="align-middle" id=" ">
+
+                           </td>
+
+
+                   </tr>
+
+                    <tr id="tunch2">
+                           <td   class="align-middle" >
+                               ZH
+                           </td>
+                           <td   class="align-middle" id=" ">
+                          Trésorerie nette au 31 Décembre (G+A) Contrôle : Trésorerie actif N (A) +
+                          Trésorerie passif N (G) </td>
+                           <td align="center" class="align-middle" id=" ">
+                          H
+                           </td>
+                           <td align="center" class="align-middle" id=" ">
+
+                           </td>
+
+
+                           <td   align="center" class="align-middle" id=" ">
+
+                           </td>
+
+
+                   </tr>
+                   </table>
+
+          </div>
+        </t>
+      </t>
+    </t>
+  </template>
+</odoo>

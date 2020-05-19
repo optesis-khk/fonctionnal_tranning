@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+
+		<!-- Bilan -->
+
+		<record id="id_wizard_view_bilan" model="ir.ui.view">
+			<field name="name">Wizard Report Bilan</field>
+			<field name="model">wizard.report.bilan</field>
+			<field name="arch" type="xml">
+				<form>
+					<group string="Période">
+						<group>
+							<field name="debut"/>
+						</group>
+						<group>
+							<field name="fin"/>
+						</group>
+					</group>
+					<footer>
+						<button name="check_report" string="Imprimer" type="object" default_focus="1" class="oe_highlight"/>
+						or
+						<button string="Cancel" class="oe_link" special="cancel" />
+					</footer>
+				</form>
+			</field>
+		</record>
+
+		<record id="action_wizard_bilan" model="ir.actions.act_window">
+			<field name="name">Générer rapport de bilan</field>
+			<field name="res_model">wizard.report.bilan</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">form</field>
+			<field name="view_id" ref="id_wizard_view_bilan"/>
+			<field name="target">new</field>
+		</record>
+
+
+		<!-- Compte de Résultat -->
+
+		<record id="id_wizard_view_compte_resultat" model="ir.ui.view">
+			<field name="name">Wizard Report Compte Résulat</field>
+			<field name="model">wizard.report.compte_resultat</field>
+			<field name="arch" type="xml">
+				<form>
+					<group string="Période">
+						<group>
+							<field name="debut"/>
+						</group>
+						<group>
+							<field name="fin"/>
+						</group>
+					</group>
+					<footer>
+						<button name="check_report" string="Imprimer" type="object" default_focus="1" class="oe_highlight"/>
+						or
+						<button string="Cancel" class="oe_link" special="cancel" />
+					</footer>
+				</form>
+			</field>
+		</record>
+
+		<record id="action_wizard_compte_resultat" model="ir.actions.act_window">
+			<field name="name">Wizard Report Compte Résulat</field>
+			<field name="res_model">wizard.report.compte_resultat</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">form</field>
+			<field name="view_id" ref="id_wizard_view_compte_resultat"/>
+			<field name="target">new</field>
+		</record>
+
+
+		<!-- Tableaux de Flux de Trésorerie -->
+
+		<record id="id_wizard_view_tab_flux_treso" model="ir.ui.view">
+			<field name="name">Wizard Report Tableaux de Flux de Trésorerie</field>
+			<field name="model">wizard.report.tab_flux_treso</field>
+			<field name="arch" type="xml">
+				<form>
+					<group string="Période">
+						<group>
+							<field name="debut"/>
+						</group>
+						<group>
+							<field name="fin"/>
+						</group>
+					</group>
+					<footer>
+						<button name="check_report" string="Imprimer" type="object" default_focus="1" class="oe_highlight"/>
+						or
+						<button string="Cancel" class="oe_link" special="cancel" />
+					</footer>
+				</form>
+			</field>
+		</record>
+
+		<record id="action_wizard_tab_flux_treso" model="ir.actions.act_window">
+			<field name="name">Wizard Report Tableaux de Flux de Trésorerie</field>
+			<field name="res_model">wizard.report.tab_flux_treso</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">form</field>
+			<field name="view_id" ref="id_wizard_view_tab_flux_treso"/>
+			<field name="target">new</field>
+		</record>
+
+
+	</data>
+</odoo>

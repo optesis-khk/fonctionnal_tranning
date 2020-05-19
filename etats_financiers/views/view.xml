@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data>
+    <!-- Vu formulaire -->
+
+    <record model="ir.ui.view" id="form_view">
+      <field name="name">model.form</field>
+      <field name="model">nom.model</field>
+      <field name="arch" type="xml">
+        <form string="Vu Formulaire">
+          <!--en-tete formulaire -->
+          <header>
+            <button name="action_button" string="Commencer" type="object" class="oe_highlight" states="draft"/>
+            <field name="state" widget="statusbar" statusbar_visible="draft,open,end"/>
+          </header>
+          <!-- corps formulaire -->
+          <sheet>
+            <group>
+              <group>
+                <field name="champ1"/>
+                <!-- pour utiliser les label -->
+                <label for="champ3" string="Trial Period Duration"/>
+                <div>
+                  <field name="champ3" class="oe_inline"/> - <field name="champ4" class="oe_inline"/>
+                </div>
+              </group>
+              <group>
+                <!-- pour appliquer une action selon une condition  -->
+                <field name="champ2" attrs="{'invisible':[('champ1', '!=', condition)]}" placeholder="champ2 pour indication"/>
+
+                <!-- pour faire un filtre -->
+                <field name="champ4" domain="[('building_id', '=', building_id)]"/>
+              </group>
+            </group>
+            <!--Onglet -->
+            <notebook>
+              <page string="onglet">
+                <!--champ One2many simple -->
+                <field name="champ_one2many"/>
+              </page>
+            </notebook>
+          </sheet>
+          <!--pied de page formulaire -->
+          <footer>
+            <button  type="object" string="verifier" name="action" id="check" invisible="1"/>
+          </footer>
+        </form>
+      </field>
+    </record>
+
+    <!-- Vu liste -->
+    <record model="ir.ui.view" id="tree_view">
+      <field name="name">modul.tree</field>
+      <field name="model">nom.model</field>
+      <field name="arch" type="xml">
+        <tree string="Vu liste">
+          <field name="champ1"/>
+          <field name="champ2"/>
+        </tree>
+      </field>
+    </record>
+
+    <!-- inherit view -->
+    <record model="ir.ui.view" id="form_inherit">
+      <field name="name">view.inherit</field>
+      <field name="model">nom.model</field>
+      <field name="inherit_id" ref="module.view"/>
+      <field name="arch" type="xml">
+        <!-- inherit xpath -->
+        <xpath expr="//form/header/button[4]" position="after">
+          <button string="Creer RDV" type="object" name="create_rdv" class="oe_highlight"/>
+        </xpath>
+        <!--attributes-->
+        <field name="champ" position="attributes">
+          <attribute name="attribut">changement</attribute>
+        </field>
+        <!--position after,before,inside-->
+        <field name="champ" position="after">
+          <field name="champ1"/>
+        </field>
+
+        <xpath expr="//form/sheet/notebook/page/field/tree/field[@name='date']" position="after">
+          <field name="champ1"/>
+          <field name="champ2"/>
+        </xpath>
+
+        <!--position au dernier onglet-->
+        <xpath expr="//notebook[last()]" position="inside">
+          <page string="page">
+            <field name="champ_one2many"/>
+          </page>
+        </xpath>
+
+      </field>
+    </record>
+
+    <!--Action Multi select-->
+      <record id="action_sale_order_liquidar" model="ir.actions.server">
+          <field name="name">Déposer</field>
+          <field name="model_id" ref="model_traite_depreciation_line"/>
+          <field name="state">code</field>
+          <field name="condition">True</field>
+          <field name="code">object.pass_to_validedall()</field>
+      </record>
+      <record id="id_of_the_action_value" model="ir.values">
+          <field name="name">Déposer</field>
+          <field name="model">traite.depreciation.line</field>
+          <field name="key" >action</field>
+          <field name="key2">client_action_multi</field>
+          <field name="value" eval="'ir.actions.server,%d'%action_sale_order_liquidar"/>
+      </record>
+
+      <!--Action Multi select New api-->
+      <record id="action_mark_as_lost" model="ir.actions.server">
+          <field name="name">CALCULER LA FEUILLE</field>
+          <field name="model_id" ref="model_hr_payslip"/>
+          <field name="binding_model_id" ref="optesis_paie.model_hr_payslip"/>
+          <field name="state">code</field>
+          <field name="code">
+            for rec in records:
+              rec.compute_sheet()
+          </field>
+      </record>
+
+  </data>
+</odoo>

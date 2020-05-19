@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+      <!-- Pour Bilan -->
+        <report
+            id="action_report_bilan"
+            model="report.etats_financiers.report_bilan"
+            string="Bilan report"
+            report_type="qweb-pdf"
+            name="etats_financiers.report_bilan"
+            file="etats_financiers.report_bilan"
+            />
+      <!-- Pour Compte de resultat -->
+        <report
+            id="action_report_compte_resultat"
+            model="report.etats_financiers.report_compte_resultat"
+            string="Compte de resultat report"
+            report_type="qweb-pdf"
+            name="etats_financiers.report_compte_resultat"
+            file="etats_financiers.report_compte_resultat"
+            />
+
+      <!-- Pour Tableaux des flux de trésorerie -->
+        <report
+           id="action_report_tab_flux_treso"
+           model="report.etats_financiers.report_tab_flux_treso"
+           string="Tableaux des flux de trésorerie"
+           report_type="qweb-pdf"
+           name="etats_financiers.report_tab_flux_treso"
+           file="etats_financiers.report_tab_flux_treso"
+           />
+
+    </data>
+</odoo>

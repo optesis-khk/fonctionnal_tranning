@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+  <!-- Menu-->
+  <menuitem id="menu_syscohada_report" name="Rapport Syscohada" parent="account.menu_finance" sequence="30"/>
+
+  <!-- Sous menu-->
+  <menuitem id="sous_menu_bilan" name="Bilan" parent="menu_syscohada_report"  action="action_wizard_bilan" sequence="1"/>
+  <menuitem id="sous_menu_compte_resultat" name="Compte de résultat" parent="menu_syscohada_report" action="action_wizard_compte_resultat" sequence="2"/>
+  <menuitem id="sous_menu_tab_flux_treso" name="Tableaux des flux de trésorererie" parent="menu_syscohada_report" action="action_wizard_tab_flux_treso" sequence="3"/>
+
+  <act_window id="action_menu_note" name="Notes" res_model="optesis.note" view_mode="tree,form"/>
+  <menuitem id="sous_menu_note" name="Notes" parent="menu_syscohada_report" action="action_menu_note"  sequence="4"/>
+
+</odoo>

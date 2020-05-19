@@ -1,0 +1,951 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data>
+    <record model="ir.ui.view" id="form_view">
+      <field name="name">optesis.note.form</field>
+      <field name="model">optesis.note</field>
+      <field name="arch" type="xml">
+        <form string="Notes">
+          <sheet>
+            <group>
+              <group>
+                <h3>
+                  <field name="name" default_focus="1" placeholder="Nom"/>
+                </h3>
+              </group>
+              <group>
+                <label for="date_debut" string="Date Comptable"/>
+                <div>
+                  <field name="date_debut" class="oe_inline"/> - <field name="date_fin" class="oe_inline"/>
+                </div>
+              </group>
+            </group>
+            <group string="Notes à afficher">
+              <group>
+                <field name="note1"/>
+                <field name="note3B"/>
+                <field name="note3D"/>
+                <field name="note4"/>
+                <field name="note6"/>
+                <field name="note8"/>
+                <field name="note9"/>
+                <field name="note11"/>
+                <field name="note13"/>
+                <field name="note15A"/>
+                <field name="note16A"/>
+                <field name="note16B_BIS"/>
+                <field name="note17"/>
+                <field name="note19"/>
+                <field name="note21"/>
+                <field name="note23"/>
+                <field name="note25"/>
+                <field name="note27A"/>
+                <field name="note28"/>
+                <field name="note30"/>
+                <field name="note32"/>
+                <field name="note34"/>
+                <field name="note36"/>
+              </group>
+              <group>
+                <field name="note3A"/>
+                <field name="note3C"/>
+                <field name="note3E"/>
+                <field name="note5"/>
+                <field name="note7"/>
+                <field name="note8A"/>
+                <field name="note10"/>
+                <field name="note12"/>
+                <field name="note14"/>
+                <field name="note15B"/>
+                <field name="note16B"/>
+                <field name="note16C"/>
+                <field name="note18"/>
+                <field name="note20"/>
+                <field name="note22"/>
+                <field name="note24"/>
+                <field name="note26"/>
+                <field name="note27B"/>
+                <field name="note29"/>
+                <field name="note31"/>
+                <field name="note33"/>
+                <field name="note35"/>
+                <field name="note37"/>
+              </group>
+            </group>
+            <notebook>
+              <page string="Note 1" attrs="{'invisible':[('note1', '==', False)]}">
+                <group string="DETTES GARANTIES PAR DES SURETTE REELLES">
+                  <field name="note1_lines1" nolabel="1">
+                    <tree editable="bottom" create="false" delete="false">
+                      <field name="name"/>
+                      <field name="montant"/>
+                      <field name="note"/>
+                      <field name="hypo"/>
+                      <field name="nant"/>
+                      <field name="gage"/>
+                    </tree>
+                  </field>
+                </group>
+                <group>
+                  <field name="note1_lines2" nolabel="1">
+                    <tree editable="bottom" create="false" delete="false">
+                      <field name="name"/>
+                      <field name="eng_dons"/>
+                      <field name="eng_recu"/>
+                    </tree>
+                  </field>
+                </group>
+                <group>
+                  <field name="commentaire_note1" placeholder="Commentaire" style=' max-width: 3000px;  width: 1000px' nolabel="1" />
+                </group>
+              </page>
+
+              <page string="Note 3A" attrs="{'invisible':[('note3A', '==', False)]}">
+                <group string="IMMOBILISATION BRUTE">
+                  <field name="note3A_lines" nolabel="1">
+                    <tree editable="bottom" create="false" delete="false">
+                      <field name="name"/>
+                      <field name="montant_ouverture"/>
+                      <field name="acqisition"/>
+                      <field name="virement"/>
+                      <field name="reevaluation"/>
+                      <field name="cession"/>
+                      <field name="virement2"/>
+                      <field name="montant_cloture"/>
+                    </tree>
+                  </field>
+                </group>
+                <group>
+                  <field name="commentaire_note3A" placeholder="Commentaire" style=' max-width: 3000px;  width: 1000px' nolabel="1" />
+                </group>
+              </page>
+
+              <page string="Note 3B" attrs="{'invisible':[('note3B', '==', False)]}">
+                <group string="BIENS PRIS EN LOCATION ACQUISITION">
+                  <field name="note3B_lines" nolabel="1">
+                    <tree editable="bottom" create="false" delete="false">
+                      <field name="name"/>
+                      <field name="nature_contrat"/>
+                      <field name="montant_ouverture"/>
+                      <field name="acqisition"/>
+                      <field name="virement"/>
+                      <field name="reevaluation"/>
+                      <field name="cession"/>
+                      <field name="virement2"/>
+                      <field name="montant_cloture"/>
+                    </tree>
+                  </field>
+                </group>
+                <group>
+                  <field name="commentaire_note3B" placeholder="Commentaire" style=' max-width: 3000px;  width: 1000px' nolabel="1" />
+                </group>
+              </page>
+
+              <page string="Note 3C" attrs="{'invisible':[('note3C', '==', False)]}">
+                <group string="IMMOBILISATION (AMORTISSEMENTS)">
+                  <field name="note3C_lines" nolabel="1">
+                    <tree editable="bottom" create="false" delete="false">
+                      <field name="name"/>
+                      <field name="amortissement_ouverture"/>
+                      <field name="augmentation"/>
+                      <field name="diminutions"/>
+                      <field name="amortissement_clorute"/>
+                    </tree>
+                  </field>
+                </group>
+                <group>
+                  <field name="commentaire_note3C" placeholder="Commentaire" style=' max-width: 3000px;  width: 1000px' nolabel="1" />
+                </group>
+              </page>
+
+              <page string="Note 3D" attrs="{'invisible':[('note3D', '==', False)]}">
+                <group string="IMMOBILISATIONS : PLUS-VALUES ET MOINS-VALUE DE CESSION">
+                  <field name="note3D_lines" nolabel="1">
+                    <tree editable="bottom" create="false" delete="false">
+                      <field name="name"/>
+                      <field name="montant"/>
+                      <field name="amortissement"/>
+                      <field name="valeur_compta"/>
+                      <field name="cession"/>
+                      <field name="value"/>
+                    </tree>
+                  </field>
+                </group>
+                <group>
+                  <field name="commentaire_note3B" placeholder="Commentaire" style=' max-width: 3000px;  width: 1000px' nolabel="1" />
+                </group>
+              </page>
+
+              <page string="Note 3E" attrs="{'invisible':[('note3E', '==', False)]}">
+                <group string="IMMOBILISATIONS : PLUS-VALUES ET MOINS-VALUE DE CESSION">
+                  <field name="note3E_lines" nolabel="1">
+                    <tree editable="bottom" create="false" delete="false">
+                      <field name="name"/>
+                      <field name="montant"/>
+                      <field name="ecart_provision"/>
+                    </tree>
+                  </field>
+                </group>
+                <group>
+                  <field name="commentaire_note3E" placeholder="Commentaire" style=' max-width: 3000px;  width: 1000px' nolabel="1" />
+                </group>
+              </page>
+
+              <page string="Note 4" attrs="{'invisible':[('note4', '==', False)]}">
+                <group string="IMMOBILISATIONS FINANCIERES">
+                  <field name="note4_lines1" nolabel="1">
+                    <tree editable="bottom" create="false" delete="false">
+                      <field name="name"/>
+                      <field name="annee_n"/>
+                      <field name="annee_n1"/>
+                      <field name="variation"/>
+                      <field name="creance1"/>
+                      <field name="creance2"/>
+                      <field name="creance3"/>
+                    </tree>
+                  </field>
+                </group>
+                <group string="LISTE DES FILIALES ET PARTICIPATIONS">
+                  <field name="note4_lines2" nolabel="1">
+                    <tree editable="bottom" create="false" delete="false">
+                      <field name="name"/>
+                      <field name="localisation"/>
+                      <field name="valeur_acquisition"/>
+                      <field name="detenu"/>
+                      <field name="montant"/>
+                      <field name="resultat"/>
+                    </tree>
+                  </field>
+                </group>
+                <group>
+                  <field name="commentaire_note4" placeholder="Commentaire" style=' max-width: 3000px;  width: 1000px' nolabel="1" />
+                </group>
+              </page>
+
+              <page string="Note 5" attrs="{'invisible':[('note5', '==', False)]}">
+                <group string="ACTIF CIRCULANT HAO">
+                  <field name="note5_lines1" nolabel="1">
+                    <tree editable="bottom" create="false" delete="false">
+                      <field name="name"/>
+                      <field name="annee_n"/>
+                      <field name="annee_n1"/>
+                      <field name="variation"/>
+                    </tree>
+                  </field>
+                </group>
+                <group>
+                  <field name="commentaire1_note5" placeholder="Commentaire" style=' max-width: 3000px;  width: 1000px' nolabel="1" />
+                </group>
+                <group string="DETTES CIRCULANTES HAO">
+                  <field name="note5_lines2" nolabel="1">
+                    <tree editable="bottom" create="false" delete="false">
+                      <field name="name"/>
+                      <field name="annee_n"/>
+                      <field name="annee_n1"/>
+                      <field name="variation"/>
+                    </tree>
+                  </field>
+                </group>
+                <group>
+                  <field name="commentaire2_note5" placeholder="Commentaire" style=' max-width: 3000px;  width: 1000px' nolabel="1" />
+                </group>
+              </page>
+
+              <page string="Note 6" attrs="{'invisible':[('note6', '==', False)]}">
+                <group string="STOCKS ET EN COURS">
+                  <field name="note6_lines" nolabel="1">
+                    <tree editable="bottom" create="false" delete="false">
+                      <field name="name"/>
+                      <field name="annee_n"/>
+                      <field name="annee_n1"/>
+                      <field name="variation"/>
+                    </tree>
+                  </field>
+                </group>
+                <group>
+                  <field name="commentaire_note6" placeholder="Commentaire" style=' max-width: 3000px;  width: 1000px' nolabel="1" />
+                </group>
+              </page>
+
+              <page string="Note 7" attrs="{'invisible':[('note7', '==', False)]}">
+                <group string="CLIENTS">
+                  <field name="note7_lines" nolabel="1">
+                    <tree editable="bottom" create="false" delete="false">
+                      <field name="name"/>
+                      <field name="annee_n"/>
+                      <field name="annee_n1"/>
+                      <field name="variation"/>
+                      <field name="creance1"/>
+                      <field name="creance2"/>
+                      <field name="creance3"/>
+                    </tree>
+                  </field>
+                </group>
+                <group>
+                  <field name="commentaire_note7" placeholder="Commentaire" style=' max-width: 3000px;  width: 1000px' nolabel="1" />
+                </group>
+              </page>
+
+              <page string="Note 8" attrs="{'invisible':[('note8', '==', False)]}">
+                <group string="AUTRES CREANCES">
+                  <field name="note8_lines" nolabel="1">
+                    <tree editable="bottom" create="false" delete="false">
+                      <field name="name"/>
+                      <field name="annee_n"/>
+                      <field name="annee_n1"/>
+                      <field name="variation"/>
+                      <field name="creance1"/>
+                      <field name="creance2"/>
+                      <field name="creance3"/>
+                    </tree>
+                  </field>
+                </group>
+                <group>
+                  <field name="commentaire_note8" placeholder="Commentaire" style=' max-width: 3000px;  width: 1000px' nolabel="1" />
+                </group>
+              </page>
+
+              <page string="Note 8A" attrs="{'invisible':[('note8A', '==', False)]}">
+                <group string="TABLEAU D’ETABLISSEMENT DES CHARGES IMMOBILISEES ET DES PROVISIONS POUR CHARGES A REPARTIR">
+                  <field name="note8A_lines1" nolabel="1">
+                    <tree editable="bottom" create="false" delete="false">
+                      <field name="name"/>
+                      <field name="frais"/>
+                      <field name="charge"/>
+                      <field name="prime"/>
+                    </tree>
+                  </field>
+                </group>
+                <group>
+                  <field name="note8A_lines2" nolabel="1">
+                    <tree editable="bottom">
+                      <field name="name"/>
+                      <field name="compte1"/>
+                      <field name="montant1"/>
+                      <field name="compte2"/>
+                      <field name="montant2"/>
+                      <field name="compte3"/>
+                      <field name="montant3"/>
+                    </tree>
+                  </field>
+                </group>
+              </page>
+
+              <page string="Note 9" attrs="{'invisible':[('note9', '==', False)]}">
+                <group string="TITRE DE PLACEMENT">
+                  <field name="note9_lines" nolabel="1">
+                    <tree editable="bottom" create="false" delete="false">
+                      <field name="name"/>
+                      <field name="annee_n"/>
+                      <field name="annee_n1"/>
+                      <field name="variation"/>
+                    </tree>
+                  </field>
+                </group>
+                <group>
+                  <field name="commentaire_note9" placeholder="Commentaire" style=' max-width: 3000px;  width: 1000px' nolabel="1" />
+                </group>
+              </page>
+
+              <page string="Note 10" attrs="{'invisible':[('note10', '==', False)]}">
+                <group string="VALEURS A ENCAISSER">
+                  <field name="note10_lines" nolabel="1">
+                    <tree editable="bottom" create="false" delete="false">
+                      <field name="name"/>
+                      <field name="annee_n"/>
+                      <field name="annee_n1"/>
+                      <field name="variation"/>
+                    </tree>
+                  </field>
+                </group>
+                <group>
+                  <field name="commentaire_note10" placeholder="Commentaire" style=' max-width: 3000px;  width: 1000px' nolabel="1" />
+                </group>
+              </page>
+
+
+              <page string="Note 11" attrs="{'invisible':[('note11', '==', False)]}">
+                <group string="DISPONIBILITES">
+                  <field name="note11_lines" nolabel="1">
+                    <tree editable="bottom" create="false" delete="false">
+                      <field name="name"/>
+                      <field name="annee_n"/>
+                      <field name="annee_n1"/>
+                      <field name="variation"/>
+                    </tree>
+                  </field>
+                </group>
+                <group>
+                  <field name="commentaire_note11" placeholder="Commentaire" style=' max-width: 3000px;  width: 1000px' nolabel="1" />
+                </group>
+              </page>
+
+
+
+              <page string="Note 12" attrs="{'invisible':[('note12', '==', False)]}">
+                <group string="ECARTS DE CONVERSION ET TRANSFERT DE CHARGES :ECARTS DE CONVERSION">
+                  <field name="note12_lines1" nolabel="1">
+                    <tree editable="bottom" create="false" delete="false">
+                      <field name="name"/>
+                      <field name="Devises"/>
+                      <field name="Montant_en_D"/>
+                      <field name="Cours_U_A_A"/>
+                      <field name="Cours_U"/>
+                      <field name="Variation"/>
+
+                    </tree>
+                  </field>
+                </group>
+                <group>
+                  <field name="commentaire1_note12" placeholder="Commentaire" style=' max-width: 3000px;  width: 1000px' nolabel="1" />
+                </group>
+
+
+                <group string="TRANSFERTS DE CHARGES">
+                  <field name="note12_lines2" nolabel="1">
+                    <tree editable="bottom" create="false" delete="false">
+                      <field name="name"/>
+                      <field name="annee_n"/>
+                      <field name="annee_n1"/>
+                      <field name="variation"/>
+                    </tree>
+                  </field>
+                </group>
+                <group>
+                  <field name="commentaire2_note12" placeholder="Commentaire" style=' max-width: 3000px;  width: 1000px' nolabel="1" />
+                </group>
+              </page>
+
+
+              <page string="Note 13" attrs="{'invisible':[('note13', '==', False)]}">
+                <group string="TRANSFERTS DE CHARGES">
+                  <field name="note13_lines" nolabel="1">
+                    <tree editable="bottom">
+                      <field name="name"/>
+                      <field name="Nationalite"/>
+                      <field name="Nature_des_actions"/>
+                      <field name="Nombre"/>
+                      <field name="Montant_total"/>
+                      <field name="Cession"/>
+                    </tree>
+                  </field>
+                </group>
+                <group>
+                  <field name="commentaire_note13" placeholder="Commentaire" style=' max-width: 3000px;  width: 1000px' nolabel="1" />
+                </group>
+              </page>
+
+              <page string="Note 14" attrs="{'invisible':[('note14', '==', False)]}">
+                <group string="PRIMES ET RESERVES">
+                  <field name="note14_lines" nolabel="1">
+                    <tree editable="bottom" create="false" delete="false">
+                      <field name="name"/>
+                      <field name="annee_n"/>
+                      <field name="annee_n1"/>
+                      <field name="variation"/>
+
+                    </tree>
+                  </field>
+                </group>
+                <group>
+                  <field name="commentaire_note14" placeholder="Commentaire" style=' max-width: 3000px;  width: 1000px' nolabel="1" />
+                </group>
+              </page>
+
+              <page string="Note 15A" attrs="{'invisible':[('note15A', '==', False)]}">
+                <group string="TOTAL SUBVENTIONS ET PROVISIONS REGLEMENTEES">
+                  <field name="note15A_lines" nolabel="1">
+                    <tree editable="bottom" create="false" delete="false">
+                      <field name="name"/>
+                      <field name="NOTE"/>
+                      <field name="annee_n"/>
+                      <field name="annee_n1"/>
+                      <field name="variation_va"/>
+                      <field name="variation_p"/>
+                      <field name="regim_fiscal"/>
+                      <field name="echeance"/>
+                    </tree>
+                  </field>
+                </group>
+                <group>
+                  <field name="commentaire_note15A" placeholder="Commentaire" style=' max-width: 3000px;  width: 1000px' nolabel="1" />
+                </group>
+              </page>
+
+
+              <page string="Note 15B" attrs="{'invisible':[('note15B', '==', False)]}">
+                <group string="TOTAL SUBVENTIONS ET PROVISIONS REGLEMENTEES">
+                  <field name="note15B_lines" nolabel="1">
+                    <tree editable="bottom" create="false" delete="false">
+                      <field name="name"/>
+                      <field name="NOTE"/>
+                      <field name="annee_n"/>
+                      <field name="annee_n1"/>
+                      <field name="variation_va"/>
+                      <field name="variation_p"/>
+                      <field name="echeance"/>
+                    </tree>
+                  </field>
+                </group>
+                <group>
+                  <field name="commentaire_note15B" placeholder="Commentaire" style=' max-width: 3000px;  width: 1000px' nolabel="1" />
+                </group>
+              </page>
+
+
+              <page string="Note 16A" attrs="{'invisible':[('note16A', '==', False)]}">
+                <group string="DETTES FINANCIERES ET RESSOURCES ASSIMILEES">
+                  <field name="note16A_lines" nolabel="1">
+                    <tree editable="bottom" create="false" delete="false">
+                      <field name="name"/>
+                      <field name="annee_n"/>
+                      <field name="annee_n1"/>
+                      <field name="variation_va"/>
+                      <field name="variation_p"/>
+                      <field name="Dettes_1aP"/>
+                      <field name="Dettes_2aP"/>
+                      <field name="Dettes_P2a"/>
+                    </tree>
+                  </field>
+                </group>
+                <group>
+                  <field name="commentaire_note16A" placeholder="Commentaire" style=' max-width: 3000px;  width: 1000px' nolabel="1" />
+                </group>
+              </page>
+
+              <page string="Note 16B" attrs="{'invisible':[('note16B', '==', False)]}">
+                <group string="ENGAGEMENTS DE RETRAITE ET AVANTAGES ASSIMILES (METHODE ACTUARIELLE)">
+                  <field name="note16BTab1_lines" nolabel="1">
+                    <tree editable="bottom" create="false" delete="false">
+                      <field name="name"/>
+                      <field name="annee_n"/>
+                      <field name="annee_n1"/>
+                    </tree>
+                  </field>
+                </group>
+                <group>
+                  <field name="commentaire_note16BTab1" placeholder="Commentaire" style=' max-width: 3000px;  width: 1000px' nolabel="1" />
+                </group>
+                <group string="VARIATION DE LA VALEUR DE L'ENGAGEMENT DE RETRAITE AU COURS DE L'EXERCICE">
+                  <field name="note16BTab2_lines" nolabel="1">
+                    <tree editable="bottom" create="false" delete="false">
+                      <field name="name"/>
+                      <field name="annee_n"/>
+                      <field name="annee_n1"/>
+                    </tree>
+                  </field>
+                </group>
+                <group>
+                  <field name="commentaire_note16BTab2" placeholder="Commentaire" style=' max-width: 3000px;  width: 1000px' nolabel="1" />
+                </group>
+                <group string="VARIATION DE LA VALEUR DE L'ENGAGEMENT DE RETRAITE AU COURS DE L'EXERCICE">
+                  <field name="note16BTab3_lines" nolabel="1">
+                    <tree editable="bottom" create="false" delete="false">
+                      <field name="name"/>
+                      <field name="augmentationN"/>
+                      <field name="diminutionsN"/>
+                      <field name="augmentationN1"/>
+                      <field name="diminutionsN1"/>
+
+                    </tree>
+                  </field>
+                </group>
+                <group>
+                  <field name="commentaire_note16BTab3" placeholder="Commentaire" style=' max-width: 3000px;  width: 1000px' nolabel="1" />
+                </group>
+              </page>
+              <page string="Note 16B BIS" attrs="{'invisible':[('note16B_BIS', '==', False)]}">
+                <group string="ENGAGEMENTS DE RETRAITE ET AVANTAGES ASSIMILES (METHODE ACTUARIELLE)">
+                </group>
+
+                <group string="ACTIF/PASSIF NET COMPTABILISE AU TITRE DES REGIMES FINANCES">
+                  <field name="note16BBISTab1_lines" nolabel="1">
+                    <tree editable="bottom" create="false" delete="false">
+                      <field name="name"/>
+                      <field name="annee_n"/>
+                      <field name="annee_n1"/>
+                    </tree>
+                  </field>
+                </group>
+                <group>
+                  <field name="commentaire_note16BBISTab1" placeholder="Commentaire" style=' max-width: 3000px;  width: 1000px' nolabel="1" />
+                </group>
+                <group string="VALEUR ACTUELLE DES ACTIFS DU REGIME ">
+                  <field name="note16BBISTab2_lines" nolabel="1">
+                    <tree editable="bottom" create="false" delete="false">
+                      <field name="name"/>
+                      <field name="RendementN"/>
+                      <field name="juste_VAN"/>
+                      <field name="RendementN1"/>
+                      <field name="juste_VAN1"/>
+                    </tree>
+                  </field>
+                </group>
+                <group>
+                  <field name="commentaire_note16BBISTab2" placeholder="Commentaire" style=' max-width: 3000px;  width: 1000px' nolabel="1" />
+                </group>
+              </page>
+
+              <page string="Note 16C" attrs="{'invisible':[('note16C', '==', False)]}">
+                <group string="ACTIFS ET PASSIFS EVENTUELS">
+                  <field name="note16C_lines" nolabel="1">
+                    <tree editable="bottom" create="false" delete="false">
+                      <field name="name"/>
+                      <field name="annee_n"/>
+                      <field name="annee_n1"/>
+                    </tree>
+                  </field>
+                </group>
+                <group>
+                  <field name="commentaire_note16C" placeholder="Commentaire" style=' max-width: 3000px;  width: 1000px' nolabel="1" />
+                </group>
+              </page>
+
+              <page string="Note 17" attrs="{'invisible':[('note17', '==', False)]}">
+                <group string="FOURNISSEURS D’EXPLOITATION">
+                  <field name="note17_lines" nolabel="1">
+                    <tree editable="bottom" create="false" delete="false">
+                      <field name="name"/>
+                      <field name="annee_n"/>
+                      <field name="annee_n1"/>
+                      <field name="variation_p"/>
+                      <field name="Dettes_1aP"/>
+                      <field name="Dettes_2aP"/>
+                      <field name="Dettes_P2a"/>
+                    </tree>
+                  </field>
+                </group>
+                <group>
+                  <field name="commentaire_note17" placeholder="Commentaire" style=' max-width: 3000px;  width: 1000px' nolabel="1" />
+                </group>
+              </page>
+
+              <page string="Note 18" attrs="{'invisible':[('note18', '==', False)]}">
+                <group string="FOURNISSEURS D’EXPLOITATION">
+                  <field name="note18_lines" nolabel="1">
+                    <tree editable="bottom" create="false" delete="false">
+                      <field name="name"/>
+                      <field name="annee_n"/>
+                      <field name="annee_n1"/>
+                      <field name="variation_p"/>
+                      <field name="Dettes_1aP"/>
+                      <field name="Dettes_2aP"/>
+                      <field name="Dettes_P2a"/>
+                    </tree>
+                  </field>
+                </group>
+                <group>
+                  <field name="commentaire_note18" placeholder="Commentaire" style=' max-width: 3000px;  width: 1000px' nolabel="1" />
+                </group>
+              </page>
+
+              <page string="Note 19" attrs="{'invisible':[('note19', '==', False)]}">
+                <group string="FOURNISSEURS D’EXPLOITATION">
+                  <field name="note19_lines" nolabel="1">
+                    <tree editable="bottom" create="false" delete="false">
+                      <field name="name"/>
+                      <field name="annee_n"/>
+                      <field name="annee_n1"/>
+                      <field name="variation_p"/>
+                      <field name="Dettes_1aP"/>
+                      <field name="Dettes_2aP"/>
+                      <field name="Dettes_P2a"/>
+                    </tree>
+                  </field>
+                </group>
+                <group>
+                  <field name="commentaire_note19" placeholder="Commentaire" style=' max-width: 3000px;  width: 1000px' nolabel="1" />
+                </group>
+              </page>
+
+              <page string="Note 20" attrs="{'invisible':[('note20', '==', False)]}">
+                <group string="FOURNISSEURS D’EXPLOITATION">
+                  <field name="note20_lines" nolabel="1">
+                    <tree editable="bottom" create="false" delete="false">
+                      <field name="name"/>
+                      <field name="annee_n"/>
+                      <field name="annee_n1"/>
+                      <field name="variation_p"/>
+                    </tree>
+                  </field>
+                </group>
+                <group>
+                  <field name="commentaire_note20" placeholder="Commentaire" style=' max-width: 3000px;  width: 1000px' nolabel="1" />
+                </group>
+              </page>
+
+              <page string="Note 21" attrs="{'invisible':[('note21', '==', False)]}">
+                   <group string="CHIFFRE D’AFFAIRES ET AUTRES PRODUITS">
+                    <field name="note21_lines" nolabel="1">
+                        <tree editable="bottom" create="false" delete="false">
+                          <field name="name"/>
+                          <field name="annee_n"/>
+                          <field name="annee_n1"/>
+                          <field name="variation_p"/>
+
+                        </tree>
+                    </field>
+                  </group>
+                  <group>
+                    <field name="commentaire_note21" placeholder="Commentaire" style=' max-width: 3000px;  width: 1000px' nolabel="1" />
+                  </group>
+                </page>
+
+                 <page string="Note 22" attrs="{'invisible':[('note22', '==', False)]}">
+                   <group string="ACHATS">
+                    <field name="note22_lines" nolabel="1">
+                        <tree editable="bottom" create="false" delete="false">
+                          <field name="name"/>
+                          <field name="annee_n"/>
+                          <field name="annee_n1"/>
+                          <field name="variation_p"/>
+
+                        </tree>
+                    </field>
+                  </group>
+                  <group>
+                    <field name="commentaire_note22" placeholder="Commentaire" style=' max-width: 3000px;  width: 1000px' nolabel="1" />
+                  </group>
+                </page>
+
+               <page string="Note 23" attrs="{'invisible':[('note23', '==', False)]}">
+                   <group string="TRANSPORTS">
+                    <field name="note23_lines" nolabel="1">
+                        <tree editable="bottom" create="false" delete="false">
+                          <field name="name"/>
+                          <field name="annee_n"/>
+                          <field name="annee_n1"/>
+                          <field name="variation_p"/>
+
+                        </tree>
+                    </field>
+                  </group>
+                  <group>
+                    <field name="commentaire_note23" placeholder="Commentaire" style=' max-width: 3000px;  width: 1000px' nolabel="1" />
+                  </group>
+                </page>
+
+                <page string="Note 24" attrs="{'invisible':[('note24', '==', False)]}">
+                   <group string="SERVICES EXTERIEURS">
+                    <field name="note24_lines" nolabel="1">
+                        <tree editable="bottom" create="false" delete="false">
+                          <field name="name"/>
+                          <field name="annee_n"/>
+                          <field name="annee_n1"/>
+                          <field name="variation_p"/>
+
+                        </tree>
+                    </field>
+                  </group>
+                  <group>
+                    <field name="commentaire_note24" placeholder="Commentaire" style=' max-width: 3000px;  width: 1000px' nolabel="1" />
+                  </group>
+                </page>
+
+                <page string="Note 25" attrs="{'invisible':[('note25', '==', False)]}">
+                   <group string="IMPOTS ET TAXES">
+                    <field name="note25_lines" nolabel="1">
+                        <tree editable="bottom" create="false" delete="false">
+                          <field name="name"/>
+                          <field name="annee_n"/>
+                          <field name="annee_n1"/>
+                          <field name="variation_p"/>
+
+                        </tree>
+                    </field>
+                  </group>
+                  <group>
+                    <field name="commentaire_note25" placeholder="Commentaire" style=' max-width: 3000px;  width: 1000px' nolabel="1" />
+                  </group>
+                </page>
+
+                <page string="Note 26" attrs="{'invisible':[('note26', '==', False)]}">
+                   <group string="AUTRES CHARGES">
+                    <field name="note26_lines" nolabel="1">
+                        <tree editable="bottom" create="false" delete="false">
+                          <field name="name"/>
+                          <field name="annee_n"/>
+                          <field name="annee_n1"/>
+                          <field name="variation_p"/>
+
+                        </tree>
+                    </field>
+                  </group>
+                  <group>
+                    <field name="commentaire_note26" placeholder="Commentaire" style=' max-width: 3000px;  width: 1000px' nolabel="1" />
+                  </group>
+                </page>
+
+                  <page string="Note 27A" attrs="{'invisible':[('note27A', '==', False)]}">
+                   <group string="CHARGES DU PERSONNEL">
+                    <field name="note27A_lines" nolabel="1">
+                        <tree editable="bottom" create="false" delete="false">
+                          <field name="name"/>
+                          <field name="annee_n"/>
+                          <field name="annee_n1"/>
+                          <field name="variation_p"/>
+
+                        </tree>
+                    </field>
+                  </group>
+                  <group>
+                    <field name="commentaire_note27A" placeholder="Commentaire" style=' max-width: 3000px;  width: 1000px' nolabel="1" />
+                  </group>
+                </page>
+
+              <page string="Note 28" attrs="{'invisible':[('note28', '==', False)]}">
+                <group string="PROVISIONS ET DEPRECIATIONS INSCRITES AU BILAN SITUATION ET MOUVEMENTS NATURE">
+                  <field name="note28_lines" nolabel="1">
+                    <tree editable="bottom" create="false" delete="false">
+                      <field name="name"/>
+                      <field name="provision_ouverture"/>
+                      <field name="exploitation_augmentation"/>
+                      <field name="financiers_augmentation"/>
+                      <field name="hors_activite_augmentation"/>
+                      <field name="exploitation_diminution"/>
+                      <field name="financiers_diminution"/>
+                      <field name="hors_activite_diminution"/>
+                      <field name="provision_cloturre"/>
+                    </tree>
+                  </field>
+                </group>
+                <group>
+                  <field name="commentaire_note28" placeholder="Commentaire" style=' max-width: 3000px;  width: 1000px' nolabel="1" />
+                </group>
+              </page>
+
+              <page string="Note 29" attrs="{'invisible':[('note29', '==', False)]}">
+                <group string="CHARGES ET REVENUS FINANCIERS">
+                  <field name="note29_lines" nolabel="1">
+                    <tree editable="bottom" create="false" delete="false">
+                      <field name="name"/>
+                      <field name="annee_n"/>
+                      <field name="annee_n1"/>
+                      <field name="variation"/>
+                    </tree>
+                  </field>
+                </group>
+                <group>
+                  <field name="commentaire_note29" placeholder="Commentaire" style=' max-width: 3000px;  width: 1000px' nolabel="1" />
+                </group>
+              </page>
+
+              <page string="Note 30" attrs="{'invisible':[('note30', '==', False)]}">
+                <group string="CHARGES ET REVENUS FINANCIERS">
+                  <field name="note30_lines" nolabel="1">
+                    <tree editable="bottom" create="false" delete="false">
+                      <field name="name"/>
+                      <field name="annee_n"/>
+                      <field name="annee_n1"/>
+                      <field name="variation"/>
+                    </tree>
+                  </field>
+                </group>
+                <group>
+                  <field name="commentaire_note30" placeholder="Commentaire" style=' max-width: 3000px;  width: 1000px' nolabel="1" />
+                </group>
+              </page>
+
+              <page string="Note 31" attrs="{'invisible':[('note31', '==', False)]}">
+                <group string="REPARTITIONS DU RESULTAT ET AUTRES ELEMENTS CARACTERISTIQUES DES CINQS DERNIERS EXERCICES">
+                  <field name="note31_lines" nolabel="1">
+                    <tree editable="bottom" create="false" delete="false">
+                      <field name="name"/>
+                      <field name="annee_n"/>
+                      <field name="annee_n1"/>
+                      <field name="annee_n2"/>
+                      <field name="annee_n3"/>
+                      <field name="annee_n4"/>
+                    </tree>
+                  </field>
+                </group>
+              </page>
+
+              <page string="Note 32" attrs="{'invisible':[('note32', '==', False)]}">
+                <group string="PROCDUCTION DE L’EXERCICE">
+                  <field name="note32_lines" nolabel="1">
+                    <tree editable="bottom" create="false" delete="false">
+                      <field name="name"/>
+                      <field name="unite"/>
+                      <field name="quantite_pays"/>
+                      <field name="valeur_pays"/>
+                      <field name="quantite_ohada"/>
+                      <field name="valeur_ohada"/>
+                      <field name="quantite_hors_ohada"/>
+                      <field name="valeur_hors_ohada"/>
+                      <field name="quantite_immo"/>
+                      <field name="valeur_immo"/>
+                      <field name="quantite_ouverture"/>
+                      <field name="valeur_ouvertute"/>
+                      <field name="quantite_cloture"/>
+                      <field name="valeur_cloture"/>
+                    </tree>
+                  </field>
+                </group>
+              </page>
+
+              <page string="Note 33" attrs="{'invisible':[('note33', '==', False)]}">
+                <group string="ACHATS DESTINES A LA PRODUCTION">
+                  <field name="note33_lines" nolabel="1">
+                    <tree editable="bottom" create="false" delete="false">
+                      <field name="name"/>
+                      <field name="unite"/>
+                      <field name="quantite_pays"/>
+                      <field name="valeur_pays"/>
+                      <field name="quantite_etat"/>
+                      <field name="valeur_etat"/>
+                      <field name="quantite_hors_etat"/>
+                      <field name="valeur_hors_etat"/>
+                      <field name="variation"/>
+                    </tree>
+                  </field>
+                </group>
+              </page>
+
+              <page string="Note 34" attrs="{'invisible':[('note34', '==', False)]}">
+                <group string="FICHE DE SYNTHESE DES PRINCIPAUX INDICATEURS FINANCIERS">
+                  <field name="note34_lines" nolabel="1">
+                    <tree editable="bottom" create="false" delete="false">
+                      <field name="name"/>
+                      <field name="annee_n"/>
+                      <field name="annee_n1"/>
+                      <field name="variation"/>
+                    </tree>
+                  </field>
+                </group>
+              </page>
+
+              <page string="Note 37" attrs="{'invisible':[('note37', '==', False)]}">
+                <group string="FICHE DE SYNTHESE DES PRINCIPAUX INDICATEURS FINANCIERS">
+                  <field name="note37_lines" nolabel="1">
+                    <tree editable="bottom" create="false" delete="false">
+                      <field name="name"/>
+                      <field name="montant"/>
+                    </tree>
+                  </field>
+                </group>
+              </page>
+
+            </notebook>
+          </sheet>
+        </form>
+      </field>
+    </record>
+    <!-- <page string="Note 10" attrs="{'invisible':[('note10', '==', False)]}">
+
+  </page> -->
+  <record model="ir.ui.view" id="tree_view">
+    <field name="name">optesis.note.tree</field>
+    <field name="model">optesis.note</field>
+    <field name="arch" type="xml">
+      <tree string="Liste des notes">
+        <field name="sequence"/>
+        <field name="name"/>
+        <field name="date_debut"/>
+        <field name="date_fin"/>
+      </tree>
+    </field>
+  </record>
+
+</data>
+</odoo>

@@ -1,0 +1,939 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <template id="report_compte_resultat">
+    <t t-call="web.html_container">
+      <t t-foreach="docs" t-as="o">
+        <t t-call="web.internal_layout">
+          <div class="page">
+            <style type="text/css">
+
+
+              #tuncht{
+              background: rgb(224, 80, 24);
+
+              }
+              #tunch{
+              background: rgb(224, 80, 24);
+              color: white;
+              }
+
+              #tunch2{
+              background: rgb(236, 151, 118);
+              }
+              #tunwidth{
+              background: rgb(224, 80, 24);
+              color: white;
+              width: 230px;
+
+
+              }
+
+            </style>
+
+            <div align="center">
+                   <strong> COMPTE DE RESULTAT </strong>
+
+                  </div>
+                  <br/>
+
+
+
+                    <!-- troixieme_tableau -->
+                   <table class="table table-condensed table-bordered" style="width:100%" >
+
+
+                    <tr id="tunch">
+                            <td align="center" class="align-middle" >
+                                REF
+                            </td>
+                            <td align="center" class="align-middle" >
+                                LIBELLE
+                            </td>
+                            <td align="center" class="align-middle" >
+                            Note
+                            </td>
+                            <td align="center" class="align-middle" >
+                               BILANREFPASSIFExercice clos le (DATE) NET
+                            </td>
+
+
+                            <td   align="center" class="align-middle">
+                                Exercice N-1 clos le (DATE) NET
+                            </td>
+
+
+                    </tr>
+                    <tr id=" ">
+                            <td   class="align-middle" >
+                               TA
+                            </td>
+                            <td   class="align-middle" >
+                                Vente de marchandise
+                            </td>
+                            <td align="center" class="align-middle" >
+                            23
+                            </td>
+                            <td align="center" class="align-middle" >
+                              10 000 000
+                            </td>
+
+
+                            <td   align="center" class="align-middle">
+                            10 000 000
+                            </td>
+
+
+                    </tr>
+                    <tr id=" ">
+                            <td   class="align-middle" >
+                                RA
+                            </td>
+                            <td   class="align-middle" >
+                               Achat de marchandises
+                            </td>
+                            <td  align="center" class="align-middle" >
+
+                            </td>
+                            <td  align="center" class="align-middle" >
+
+                            </td>
+
+
+                            <td   align="center"  class="align-middle">
+
+                            </td>
+
+
+                    </tr><tr id=" ">
+                            <td   class="align-middle" >
+                               RB
+                            </td>
+                            <td   class="align-middle" >
+                                Variation de stock de marchandises
+                            </td>
+                            <td  align="center"  class="align-middle" >
+
+                            </td>
+                            <td align="center"  class="align-middle" >
+
+                            </td>
+
+
+                            <td   align="center"  class="align-middle">
+
+                            </td>
+
+
+                    </tr><tr id=" ">
+                            <td   class="align-middle" >
+                                XA
+                            </td>
+                            <td   class="align-middle" id="tunch" >
+                                <strong> MARGE COMMERCIALE</strong>
+                            </td>
+                            <td  align="center" class="align-middle"  id="tunch">
+                            <strong> </strong>
+                            </td>
+                            <td   align="center" class="align-middle" id="tunch" >
+                              <strong> </strong>
+                            </td>
+
+
+                            <td    align="center" class="align-middle" id="tunch">
+                            <strong> </strong>
+                            </td>
+
+
+                    </tr><tr id=" ">
+                            <td   class="align-middle" >
+                              TB
+                            </td>
+                            <td   class="align-middle" >
+                                Ventes de produits fabriques
+                            </td>
+                            <td align="center"  class="align-middle" >
+
+                            </td>
+                            <td align="center"  class="align-middle" >
+
+                            </td>
+
+
+                            <td   align="center"  class="align-middle">
+
+                            </td>
+
+
+                    </tr><tr id=" ">
+                            <td   class="align-middle" >
+                                TC
+                            </td>
+                            <td   class="align-middle" >
+                                Travaux, services vendus
+                            </td>
+                            <td align="center"  class="align-middle" >
+
+                            </td>
+                            <td align="center"  class="align-middle" >
+
+                            </td>
+
+
+                            <td   align="center"  class="align-middle">
+
+                            </td>
+
+
+                    </tr><tr id=" ">
+                            <td   class="align-middle" >
+                                TD
+                            </td>
+                            <td   class="align-middle" >
+                                Produits accessoires
+                            </td>
+                            <td align="center"  class="align-middle" >
+
+                            </td>
+                            <td  align="center" class="align-middle" >
+
+                            </td>
+
+
+                            <td   align="center"  class="align-middle">
+
+                            </td>
+
+
+                    </tr><tr id=" ">
+                            <td   class="align-middle" >
+                                XB
+                            </td>
+                            <td   class="align-middle" id="tunch" >
+                                <strong>CHIFFRE D'AFFAIRES </strong>
+                            </td>
+                            <td align="center"  class="align-middle"  id="tunch">
+                             <strong> </strong>
+                            </td>
+                            <td  align="center" class="align-middle" id="tunch">
+                               <strong> </strong>
+                            </td>
+
+
+                            <td   align="center"  class="align-middle" id="tunch">
+                             <strong> </strong>
+                            </td>
+
+
+                    </tr><tr id=" ">
+                            <td   class="align-middle" >
+                               TE
+                            </td>
+                            <td   class="align-middle" >
+                                Production stockee (ou destockage)
+                            </td>
+                            <td  align="center" class="align-middle" >
+
+                            </td>
+                            <td  align="center" class="align-middle" >
+
+                            </td>
+
+
+                            <td   align="center"  class="align-middle">
+
+                            </td>
+
+
+                    </tr><tr id=" ">
+                            <td   class="align-middle" >
+                               TF
+                            </td>
+                            <td   class="align-middle" >
+                                Production immobilisee
+                            </td>
+                            <td  align="center" class="align-middle" >
+
+                            </td>
+                            <td  align="center" class="align-middle" >
+
+                            </td>
+
+
+                            <td   align="center"  class="align-middle">
+
+                            </td>
+
+
+                    </tr><tr id=" ">
+                            <td  class="align-middle" >
+                                TG
+                            </td>
+                            <td   class="align-middle" >
+                                Subventions d'exploitation
+                            </td>
+                            <td  align="center" class="align-middle" >
+
+                            </td>
+                            <td align="center"  class="align-middle" >
+
+                            </td>
+
+
+                            <td    align="center" class="align-middle">
+
+                            </td>
+
+
+                    </tr><tr id=" ">
+                            <td    class="align-middle" >
+                              TH
+                            </td>
+                            <td    class="align-middle" >
+                                Autres produits
+                            </td>
+                            <td align="center"  class="align-middle" >
+
+                            </td>
+                            <td  align="center" class="align-middle" >
+
+                            </td>
+
+
+                            <td    align="center" class="align-middle">
+
+                            </td>
+
+
+                    </tr><tr id=" ">
+                            <td   class="align-middle" >
+                                TI
+                            </td>
+                            <td   class="align-middle" >
+                                Transfert de charges d'exploitation
+                            </td>
+                            <td align="center"  class="align-middle" >
+
+                            </td>
+                            <td align="center" class="align-middle" >
+
+                            </td>
+
+
+                            <td    align="center" class="align-middle">
+
+                            </td>
+
+
+                    </tr><tr id=" ">
+                            <td   class="align-middle" >
+                                RC
+                            </td>
+                            <td   class="align-middle" >
+                                Achat de matiéres premiéres et fournitures liées
+                            </td>
+                            <td  align="center" class="align-middle" >
+
+                            </td>
+                            <td  align="center" class="align-middle" >
+
+                            </td>
+
+
+                            <td     class="align-middle">
+
+                            </td>
+
+
+                    </tr><tr id=" ">
+                            <td    class="align-middle" >
+                             RD
+                            </td>
+                            <td lign="center"  class="align-middle" >
+                               Variation de stocks de matiéres premiéres et fournitures liées
+                            </td>
+                            <td align="center"  class="align-middle" >
+
+                            </td>
+                            <td  align="center" class="align-middle" >
+
+                            </td>
+
+
+                            <td   align="center"   class="align-middle">
+
+                            </td>
+
+
+                    </tr><tr id=" ">
+                            <td    class="align-middle" >
+                               RE
+                            </td>
+                            <td    class="align-middle" >
+                                Autres achats
+                            </td>
+                            <td align="center"  class="align-middle" >
+
+                            </td>
+                            <td  align="center" class="align-middle" >
+
+                            </td>
+
+
+                            <td   align="center"  class="align-middle">
+
+                            </td>
+
+
+                    </tr><tr id=" ">
+                            <td   class="align-middle" >
+                                RF
+                            </td>
+                            <td    class="align-middle" >
+                                Variation de stocks d'autres approvisionnements
+                            </td>
+                            <td  align="center" class="align-middle" >
+
+                            </td>
+                            <td  align="center" class="align-middle" >
+
+                            </td>
+
+
+                            <td   align="center"  class="align-middle">
+
+                            </td>
+
+
+                    </tr><tr id=" ">
+                            <td    class="align-middle" >
+                                RG
+                            </td>
+                            <td    class="align-middle" >
+                                Transport
+                            </td>
+                            <td  align="center" class="align-middle" >
+
+                            </td>
+                            <td  align="center" class="align-middle" >
+
+                            </td>
+
+
+                            <td    align="center" class="align-middle">
+
+                            </td>
+
+
+                    </tr><tr id=" ">
+                            <td    class="align-middle" >
+                                RH
+                            </td>
+                            <td    class="align-middle" >
+                                Services extérieurs
+                            </td>
+                            <td align="center"  class="align-middle" >
+
+                            </td>
+                            <td  align="center" class="align-middle" >
+
+                            </td>
+
+
+                            <td   align="center"  class="align-middle">
+
+                            </td>
+
+
+                    </tr><tr id=" ">
+                            <td    class="align-middle" >
+                                RI
+                            </td>
+                            <td    class="align-middle" >
+                                Impots et taxes
+                            </td>
+                            <td  align="center" class="align-middle" >
+
+                            </td>
+                            <td align="center"  class="align-middle" >
+
+                            </td>
+
+
+                            <td    align="center" class="align-middle">
+
+                            </td>
+
+
+                    </tr><tr id=" ">
+                            <td   class="align-middle" >
+                                RJ
+                            </td>
+                            <td    class="align-middle" >
+                                Autres charges
+                            </td>
+                            <td align="center" class="align-middle" >
+
+                            </td>
+                            <td align="center"  class="align-middle" >
+
+                            </td>
+
+
+                            <td   align="center"  class="align-middle">
+
+                            </td>
+
+
+                    </tr><tr id=" ">
+                            <td   class="align-middle" >
+                                XC
+                            </td>
+                            <td    class="align-middle" id="tunch" >
+
+                                <strong> VALEUR AJOUTEE </strong>
+                            </td>
+                            <td align="center"  class="align-middle"  id="tunch">
+                            <strong> </strong>
+                            </td>
+                            <td  align="center" class="align-middle" id="tunch" >
+                              <strong> </strong>
+                            </td>
+
+
+                            <td   align="center"  class="align-middle" id="tunch">
+                            <strong> </strong>
+                            </td>
+
+
+                    </tr><tr id=" ">
+                            <td    class="align-middle" >
+                                <strong> </strong>
+                            </td>
+                            <td    class="align-middle" >
+
+                            </td>
+                            <td  align="center" class="align-middle" >
+
+                            </td>
+                            <td align="center"  class="align-middle" >
+
+                            </td>
+
+
+                            <td   align="center"  class="align-middle">
+
+                            </td>
+
+
+                    </tr><tr id=" ">
+                            <td    class="align-middle" >
+                                RK
+                            </td>
+                            <td    class="align-middle" >
+                                Charges de personnel
+                            </td>
+                            <td  align="center" class="align-middle" >
+
+                            </td>
+                            <td  align="center" class="align-middle" >
+
+                            </td>
+
+
+                            <td   align="center"  class="align-middle">
+
+                            </td>
+
+
+                    </tr><tr id=" ">
+                            <td    class="align-middle" >
+                            XD
+                         </td>
+                            <td    class="align-middle" id="tunch" >
+                                             <strong>EXCEDENT BRUT D'EXPLOITATION </strong>
+
+                            </td>
+                            <td align="center"  class="align-middle" id="tunch">
+                            <strong> </strong>
+                            </td>
+                            <td  align="center" class="align-middle" id="tunch">
+                              <strong> </strong>
+                            </td>
+
+
+                            <td   align="center"  class="align-middle" id="tunch">
+                            <strong> </strong>
+                            </td>
+
+
+                    </tr><tr id=" ">
+                            <td    class="align-middle" >
+                                TJ
+                            </td>
+                            <td    class="align-middle" >
+                                Reprises d'armotissement, de provisions et de dépréciations
+                            </td>
+                            <td  align="center" class="align-middle" >
+
+                            </td>
+                            <td align="center"  class="align-middle" >
+
+                            </td>
+
+
+                            <td   align="center"  class="align-middle">
+
+                            </td>
+
+
+                    </tr><tr id=" ">
+                            <td    class="align-middle" >
+                                RL
+                            </td>
+                            <td    class="align-middle" >
+                                Dotation aux amortissements, aux provisions et aux dépréciations
+                            </td>
+                            <td  align="center" class="align-middle" >
+
+                            </td>
+                            <td align="center" class="align-middle" >
+
+                            </td>
+
+
+                            <td   align="center"  class="align-middle">
+
+                            </td>
+
+
+                    </tr><tr id=" ">
+                            <td    class="align-middle" >
+                                XE
+                            </td>
+                            <td     class="align-middle" id="tunch">
+                                <strong>RESULTAT D'EXPLOITATION </strong>
+                            </td>
+                            <td align="center"  class="align-middle" id="tunch">
+                            <strong> </strong>
+                            </td>
+                            <td align="center"  class="align-middle" id="tunch">
+                              <strong> </strong>
+                            </td>
+
+
+                            <td    align="center" class="align-middle" id="tunch">
+                            <strong> </strong>
+                            </td>
+
+
+                    </tr><tr id=" ">
+                            <td    class="align-middle" >
+                                TK
+                            </td>
+                            <td    class="align-middle" >
+                                Revenus financiers et assimilés
+                            </td>
+                            <td align="center"  class="align-middle" >
+
+                            </td>
+                            <td align="center"  class="align-middle" >
+
+                            </td>
+
+
+                            <td   align="center"  class="align-middle">
+
+                            </td>
+
+
+                    </tr><tr id=" ">
+                            <td    class="align-middle" >
+                                TL
+                            </td>
+                            <td    class="align-middle" >
+                               Reprises de provisions et dépréciations financiéres
+                            </td>
+                            <td   class="align-middle" >
+
+                            </td>
+                            <td   class="align-middle" >
+
+                            </td>
+
+
+                            <td     class="align-middle">
+
+                            </td>
+
+
+                    </tr><tr id=" ">
+                            <td   class="align-middle" >
+                                TM
+                            </td>
+                            <td   class="align-middle" >
+                               Transferts de charges financiéres
+                            </td>
+                            <td   class="align-middle" >
+
+                            </td>
+                            <td   class="align-middle" >
+
+                            </td>
+
+
+                            <td     class="align-middle">
+
+                            </td>
+
+
+                    </tr><tr id=" ">
+                            <td   class="align-middle" >
+                              RM
+                            </td>
+                            <td   class="align-middle" >
+                               Frais financiers et charges assimilés
+                            </td>
+                            <td align="center"  class="align-middle" >
+
+                            </td>
+                            <td  align="center" class="align-middle" >
+
+                            </td>
+
+
+                            <td   align="center"   class="align-middle">
+
+                            </td>
+
+
+                    </tr><tr id=" ">
+                            <td   class="align-middle" >
+                               RN
+                            </td>
+                            <td   class="align-middle" >
+                               Dotations aux provisions et  aux dépréciations financiéres
+                            </td>
+                            <td align="center" class="align-middle" >
+
+                            </td>
+                            <td align="center" class="align-middle" >
+
+                            </td>
+
+
+                            <td   align="center" class="align-middle">
+
+                            </td>
+
+
+                    </tr><tr id=" ">
+                            <td   class="align-middle" >
+                              XF
+                            </td>
+                            <td   class="align-middle" id="tunch">
+                                  <strong> RESULTAT FINANCIER</strong>
+                            </td>
+                            <td align="center" class="align-middle" id="tunch">
+                              <strong> </strong>
+                            </td>
+                            <td align="center" class="align-middle" id="tunch">
+                                <strong> </strong>
+                            </td>
+
+
+                            <td   align="center" class="align-middle" id="tunch">
+                              <strong> </strong>
+                            </td>
+
+
+                    </tr><tr id=" ">
+                            <td   class="align-middle" >
+                               XG
+                            </td>
+                            <td   class="align-middle" >
+                                RESULTAT DES ACTIVITES ORDINAIRES
+                            </td>
+                            <td align="center" class="align-middle" >
+
+                            </td>
+                            <td align="center" class="align-middle" >
+
+                            </td>
+
+
+                            <td   align="center" class="align-middle">
+
+                            </td>
+
+
+                    </tr><tr id=" ">
+                            <td   class="align-middle" >
+                              TN
+                            </td>
+                            <td   class="align-middle" >
+                                Produits des cessions d'immobilisation
+                            </td>
+                            <td align="center" class="align-middle" >
+
+                            </td>
+                            <td align="center" class="align-middle" >
+
+                            </td>
+
+
+                            <td   align="center" class="align-middle">
+
+                            </td>
+
+
+                    </tr><tr id=" ">
+                            <td   class="align-middle" >
+                               TO
+                            </td>
+                            <td   class="align-middle" >
+                                Autres Produits HAO
+                            </td>
+                            <td align="center" class="align-middle" >
+
+                            </td>
+                            <td align="center" class="align-middle" >
+
+                            </td>
+
+
+                            <td   align="center" class="align-middle">
+
+                            </td>
+
+
+                    </tr><tr id=" ">
+                            <td   class="align-middle" >
+                                RO
+                            </td>
+                            <td   class="align-middle" >
+                                Valeurs comptables des cessions d'immobilisation
+                            </td>
+                            <td align="center" class="align-middle" >
+
+                            </td>
+                            <td align="center" class="align-middle" >
+
+                            </td>
+
+
+                            <td   align="center" class="align-middle">
+
+                            </td>
+
+
+                    </tr><tr id=" ">
+                            <td   class="align-middle" >
+                                RP
+                            </td>
+                            <td   class="align-middle" >
+                                Autres Charges HAO
+                            </td>
+                            <td align="center" class="align-middle" >
+
+                            </td>
+                            <td align="center" class="align-middle" >
+
+                            </td>
+
+
+                            <td   align="center" class="align-middle">
+
+                            </td>
+
+
+                    </tr><tr id=" ">
+                            <td   class="align-middle" >
+                               XH
+                            </td>
+                            <td   class="align-middle" >
+                               RESULTAT HORS ACTIVITES ORDINAIRES
+                            </td>
+                            <td align="center" class="align-middle" >
+
+                            </td>
+                            <td align="center" class="align-middle" >
+
+                            </td>
+
+
+                            <td   align="center" class="align-middle">
+
+                            </td>
+
+
+                    </tr><tr id=" ">
+                            <td   class="align-middle" >
+                              RQ
+                            </td>
+                            <td   class="align-middle" >
+                                Participation des travailleurs
+                            </td>
+                            <td align="center" class="align-middle" >
+
+                            </td>
+                            <td align="center" class="align-middle" >
+
+                            </td>
+
+
+                            <td   align="center" class="align-middle">
+
+                            </td>
+
+
+                    </tr><tr id=" ">
+                            <td   class="align-middle" >
+                               RS
+                            </td>
+                            <td   class="align-middle" >
+                                Participation des travailleurs
+                            </td>
+                            <td align="center" class="align-middle" >
+
+                            </td>
+                            <td align="center" class="align-middle" >
+
+                            </td>
+
+
+                            <td   align="center" class="align-middle">
+
+                            </td>
+
+
+                    </tr><tr id=" ">
+                            <td   class="align-middle" >
+                                XI
+                            </td>
+                            <td   class="align-middle" id="tunch">
+                                <strong> RESULTAT NET</strong>
+                            </td>
+                            <td align="center" class="align-middle" id="tunch">
+                            <strong> </strong>
+                            </td>
+                            <td align="center" class="align-middle" id="tunch">
+                              <strong> </strong>
+                            </td>
+
+
+                            <td   align="center" class="align-middle" id="tunch">
+                            <strong> </strong>
+                            </td>
+
+
+                    </tr>
+
+
+                    </table>
+
+          </div>
+        </t>
+      </t>
+    </t>
+  </template>
+</odoo>
